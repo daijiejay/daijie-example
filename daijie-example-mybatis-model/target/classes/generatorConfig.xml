@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE generatorConfiguration  
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">  
+<generatorConfiguration>  
+    <properties resource="bootstrap.properties"/>
+    <classPathEntry  location="E:\work\maven\.m2\repository\mysql\mysql-connector-java\5.1.9\mysql-connector-java-5.1.9.jar"/>
+    <!-- <classPathEntry  location="D:\apache-maven-3.2.5-bin\data\mysql\mysql-connector-java\5.1.41\mysql-connector-java-5.1.41.jar"/> -->
+    <context id="demo1"  targetRuntime="MyBatis3">
+
+        <!-- 由于beginningDelimiter和endingDelimiter的默认值为双引号(")，在Mysql中不能这么写，所以还要将这两个默认值改为**反单引号(`)**，配置如下：  -->
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <property name="mergeable" value="true"/>
+        
+        <plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin"></plugin>
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"></plugin>
+        <plugin type="org.mybatis.generator.plugins.VirtualPrimaryKeyPlugin"></plugin>
+        <plugin type="org.mybatis.generator.plugins.FluentBuilderMethodsPlugin"></plugin>
+        <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"></plugin>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="${mapper.mappers}"/>
+            <property name="caseSensitive" value="true"/>
+            <property name="forceAnnotation" value="true"/>
+        </plugin>
+
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+        
+        <jdbcConnection driverClass="${jdbc.driverClass}"
+                        connectionURL="${demo1.jdbc.url}" userId="${demo1.jdbc.username}"
+                        password="${demo1.jdbc.password}">
+        </jdbcConnection> 
+        
+        <javaTypeResolver>  
+            <property name="forceBigDecimals" value="false"/>  
+        </javaTypeResolver>  
+         
+        <javaModelGenerator targetPackage="org.daijie.mybatis.model" targetProject="src/main/java">
+            <property name="trimStrings" value="true"/>  
+        </javaModelGenerator> 
+        
+        <sqlMapGenerator targetPackage="mybatis-mapper" targetProject="src/main/resources">
+        </sqlMapGenerator>   
+        
+        <javaClientGenerator type="XMLMAPPER" targetPackage="org.daijie.mybatis.mapper" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>  
+        </javaClientGenerator>
+        
+        <table tableName="user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+    </context>  
+    <context id="demo2"  targetRuntime="MyBatis3">
+
+        <!-- 由于beginningDelimiter和endingDelimiter的默认值为双引号(")，在Mysql中不能这么写，所以还要将这两个默认值改为**反单引号(`)**，配置如下：  -->
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <property name="mergeable" value="true"/>
+        
+        <plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin"></plugin>
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"></plugin>
+        <plugin type="org.mybatis.generator.plugins.VirtualPrimaryKeyPlugin"></plugin>
+        <plugin type="org.mybatis.generator.plugins.FluentBuilderMethodsPlugin"></plugin>
+        <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"></plugin>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="${mapper.mappers}"/>
+            <property name="caseSensitive" value="true"/>
+            <property name="forceAnnotation" value="true"/>
+        </plugin>
+
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+        
+        <jdbcConnection driverClass="${jdbc.driverClass}"
+                        connectionURL="${demo2.jdbc.url}" userId="${demo2.jdbc.username}"
+                        password="${demo2.jdbc.password}">
+        </jdbcConnection> 
+        
+        <javaTypeResolver>  
+            <property name="forceBigDecimals" value="false"/>  
+        </javaTypeResolver>  
+         
+        <javaModelGenerator targetPackage="org.daijie.mybatis.model" targetProject="src/main/java">
+            <property name="trimStrings" value="true"/>  
+        </javaModelGenerator> 
+        
+        <sqlMapGenerator targetPackage="mybatis-mapper" targetProject="src/main/resources">
+        </sqlMapGenerator>   
+        
+        <javaClientGenerator type="XMLMAPPER" targetPackage="org.daijie.mybatis.mapper" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>  
+        </javaClientGenerator>
+        
+        <table tableName="user_info" domainObjectName="UserInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+    </context>  
+    <!-- mvn mybatis-generator:generate -->
+</generatorConfiguration>

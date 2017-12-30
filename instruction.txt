@@ -1,0 +1,14 @@
+daijie-eureka-server:8761
+daijie-config-server:12800
+daijie-admin-server:12812
+daijie-sleuth-server:12809
+daijie-activiti-cloud:12806
+daijie-elasticsearch-cloud:12807
+daijie-jpa-cloud:12808
+daijie-mybatis-cloud:12801
+daijie-mybatis-shardingjdbc-cloud:12810
+daijie-quartz-cloud:12805
+daijie-social-cloud:12811
+daijie-shiro-api:12803
+daijie-shiro-security:12802
+daijie-oauth2-security:12813

@@ -1,0 +1,41 @@
+# Server settings
+server:
+    port:8080
+    address:localhost
+
+# DATASOURCE
+jdbc:
+    dataSourceClassName: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
+    url: jdbc:mysql://localhost:3306/zimadai?useUnicode=true&amp;charaterEncoding=utf-8
+    databaseName: zimadai
+    serverName: 127.0.0.1
+    username: root
+    password: daijie123
+    cachePrepStmts: true
+    prepStmtsSize: 250
+    prepStmtsCacheSqlLimit: 2048
+    userServerPrepStmts: true
+    maxActive: 1000
+    maxIdel: 1000
+    maxWait: 10000
+    driverClass: com.mysql.jdbc.Driver
+
+# SPRING PROFILES
+spring:       
+    # HTTP ENCODING
+    http:
+        encoding.charset: UTF-8
+        encoding.enable: true
+        encoding.force: true
+
+# MyBatis
+mybatis:
+    typeAliasesPackage: org.daijie.api.model
+    mapperLocations: classpath:/mapper/*.xml
+    configLocation: classpath:/mybatis-config.xml
+    packages: org.daijie.api.dao
+
+# LOGGING
+logging:
+    level:
+       com.ibatis:DEBUG
