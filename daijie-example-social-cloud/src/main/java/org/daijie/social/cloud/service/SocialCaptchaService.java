@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * 第三方验证码测试
  * @author daijie_jay
- * @date 2017年11月28日
+ * @since 2017年11月28日
  */
 @RestController
 public class SocialCaptchaService extends ApiController implements SocialCaptchaCloud {

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 /**
  * 消息生产者
  * @author daijie
- * @date 2017年8月11日
+ * @since 2017年8月11日
  */
 @Service
 public class ProducerTest {

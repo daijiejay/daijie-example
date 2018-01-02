@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 /**
  * 消息消费者
  * @author daijie
- * @date 2017年8月11日
+ * @since 2017年8月11日
  */
 @Component
 @EnableScheduling

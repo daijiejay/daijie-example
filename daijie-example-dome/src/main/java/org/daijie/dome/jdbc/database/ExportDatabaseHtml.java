@@ -15,11 +15,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 
- * @author daijie
- * @date 2017年6月5日
  * 导出数据结构文档
- * 
+ * @author daijie
+ * @since 2017年6月5日
  */
 public class ExportDatabaseHtml {
 

@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * 分布式锁测试
  * @author daijie_jay
- * @date 2017年11月24日
+ * @since 2017年11月24日
  */
 @Api(description="分布式锁测试")
 @RestController

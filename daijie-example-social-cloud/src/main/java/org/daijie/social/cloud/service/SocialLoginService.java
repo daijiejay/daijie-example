@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 /**
  * 第三方登录测试
  * @author daijie_jay
- * @date 2017年11月28日
+ * @since 2017年11月28日
  */
 @Controller
 public class SocialLoginService extends WebController implements SocialLoginCloud {

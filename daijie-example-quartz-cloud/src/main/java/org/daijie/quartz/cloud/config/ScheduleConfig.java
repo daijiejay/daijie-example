@@ -10,7 +10,7 @@ import java.util.concurrent.Executors;
  * 多线程执行定时任务
  * 所有的定时任务都放在一个线程池中，定时任务启动时使用不同都线程。
  * @author daijie
- * @date 2017年8月12日
+ * @since 2017年8月12日
  */
 @Configuration
 public class ScheduleConfig implements SchedulingConfigurer {

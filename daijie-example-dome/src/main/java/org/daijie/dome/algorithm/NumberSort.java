@@ -1,11 +1,9 @@
 package org.daijie.dome.algorithm;
 
 /**
- *  
- * @author daijie
- * @date 2017年6月5日
  * 数组排序
- * 
+ * @author daijie
+ * @since 2017年6月5日
  */
 public class NumberSort {   
 	//私有构造方法，禁止实例化  

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * 基于shiro session redis测试
  * @author daijie
- * @date 2017年6月22日
+ * @since 2017年6月22日
  */
 @Api(description="缓存测试")
 @RestController
