@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.daijie</groupId>
 		<artifactId>daijie-example</artifactId>
-		<version>1.0.0-RELEASE</version>
+		<version>1.0.1-RELEASE</version>
 	</parent>
 	<artifactId>daijie-example-sleuth-server</artifactId>
 	<name>daijie-example-sleuth-server</name>
