@@ -39,6 +39,12 @@ public class LockController {
 				logger.info("获取锁业务处理");
 				return 1;
 			}
+			
+			@Override
+			public Object onError(Exception exception){
+				logger.info("锁异常业务处理");
+		    	return 0;
+		    }
 		});
 		return Result.build(result);
 	}
