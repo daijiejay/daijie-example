@@ -3,14 +3,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.daijie</groupId>
 	<artifactId>daijie-example</artifactId>
-	<version>1.0.1-RELEASE</version>
+	<version>1.0.2-RELEASE</version>
 	<packaging>pom</packaging>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
 		<spring.cloud.version>1.4.0.RELEASE</spring.cloud.version>
 		<spring.boot.version>1.5.9.RELEASE</spring.boot.version>
-		<daijie.version>1.0.1-RELEASE</daijie.version>
+		<daijie.version>1.0.2-RELEASE</daijie.version>
 		<!-- 打包跳过单元测试 -->
 		<skipTests>true</skipTests>
 	</properties>
@@ -30,7 +30,6 @@
 		<module>daijie-example-mybatis-cloud</module>
 		<module>daijie-example-mybatis-shardingjdbc-cloud</module>
 		<module>daijie-example-rabbit-cloud</module>
-		<module>daijie-example-dome</module>
 		<module>daijie-example-quartz-cloud</module>
 		<module>daijie-example-shiro-api</module>
 		<module>daijie-example-activiti-cloud</module>
