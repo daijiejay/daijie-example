@@ -4,10 +4,10 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 import org.apache.log4j.Logger;
-import org.daijie.core.factory.specific.ModelResultInitialFactory.Result;
 import org.daijie.core.lock.Callback;
 import org.daijie.core.lock.LockTool;
 import org.daijie.core.result.ModelResult;
+import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;

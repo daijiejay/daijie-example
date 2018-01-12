@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.daijie.api.UserCloud;
 import org.daijie.core.controller.ApiController;
-import org.daijie.core.factory.specific.ModelResultInitialFactory.Result;
 import org.daijie.core.result.ModelResult;
+import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
 import org.daijie.mybatis.mapper.UserMapper;
 import org.daijie.mybatis.model.User;
 import org.springframework.beans.factory.annotation.Autowired;

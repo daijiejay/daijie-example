@@ -36,7 +36,7 @@ public interface BaseCloud {
 	 */
 	@ApiOperation(value = "根据流程ID查询流程")
 	@RequestMapping(value = "flow/process/{id}", method = RequestMethod.GET)
-	public ModelResult<Map<String, Object>> getProcessById(@PathVariable(name = "id") Integer id);
+	public ModelResult<PageResult<Map<String, Object>>> getProcessById(@PathVariable(name = "id") Integer id);
 	
 	/**
 	 * 根据处理人查询所有流程
@@ -44,6 +44,6 @@ public interface BaseCloud {
 	 * @return
 	 */
 	@ApiOperation(value = "根据处理人查询所有流程")
-	@RequestMapping(value = "flow/process/operator/{operatorId}", method = RequestMethod.GET)
-	public ModelResult<PageResult<Map<String, Object>>> getProcessByOperator(@PathVariable(name = "operatorId") Integer operatorId);
+	@RequestMapping(value = "flow/process/operator/{assignee}", method = RequestMethod.GET)
+	public ModelResult<PageResult<Map<String, Object>>> getProcessByOperator(@PathVariable(name = "assignee") String assignee);
 }

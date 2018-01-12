@@ -2,8 +2,8 @@ package org.daijie.rabbit.cloud.service;
 
 import org.daijie.api.RabbitMQCloud;
 import org.daijie.core.controller.ApiController;
-import org.daijie.core.factory.specific.ModelResultInitialFactory.Result;
 import org.daijie.core.result.ModelResult;
+import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
 import org.daijie.rabbit.cloud.mq.producer.ProducerTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;

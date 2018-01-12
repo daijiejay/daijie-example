@@ -3,8 +3,8 @@ package org.daijie.api.controller;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
-import org.daijie.core.factory.specific.ModelResultInitialFactory.Result;
 import org.daijie.core.result.ModelResult;
+import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
 import org.daijie.shiro.session.ShiroRedisSession.Redis;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

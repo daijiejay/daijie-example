@@ -4,8 +4,8 @@ import java.util.Iterator;
 
 import org.daijie.api.BlogCloud;
 import org.daijie.api.model.Blog;
-import org.daijie.core.factory.specific.ModelResultInitialFactory.Result;
 import org.daijie.core.result.ModelResult;
+import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
 import org.daijie.elasticsearch.cloud.dao.BlogSearchRepository;
 import org.daijie.elasticsearch.cloud.service.base.BaseSearchService;
 import org.springframework.web.bind.annotation.PathVariable;

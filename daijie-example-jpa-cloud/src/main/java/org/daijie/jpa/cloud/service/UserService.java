@@ -3,8 +3,8 @@ package org.daijie.jpa.cloud.service;
 import java.util.List;
 
 import org.daijie.api.UserCloud;
-import org.daijie.core.factory.specific.ModelResultInitialFactory.Result;
 import org.daijie.core.result.ModelResult;
+import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
 import org.daijie.jpa.cloud.dao.UserSearchRepository;
 import org.daijie.jpa.cloud.service.base.BaseSearchService;
 import org.daijie.mybatis.model.User;

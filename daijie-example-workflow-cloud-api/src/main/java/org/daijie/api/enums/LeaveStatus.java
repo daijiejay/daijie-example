@@ -1,15 +1,14 @@
 package org.daijie.api.enums;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.EnumMap;
 import java.util.List;
 
-import org.daijie.core.factory.IEnumFactory;
+import org.daijie.core.process.factory.OrderEnumProcessFactory;
 
-public enum LeaveStatus implements IEnumFactory {
+public enum LeaveStatus implements OrderEnumProcessFactory<LeaveStatus> {
 
 	START(0, null, "请假申请"),
 	
@@ -39,31 +38,25 @@ public enum LeaveStatus implements IEnumFactory {
 		this.msg = msg;
 	}
 
+	@Override
 	public Integer getStatus() {
 		return status;
 	}
 
+	@Override
 	public String getMsg() {
 		return msg;
 	}
-	
+
+	@Override
 	public String getAssignee() {
 		return assignee;
 	}
-
-	public static LeaveStatus getEnum(Integer status) {  
-        for  (LeaveStatus leaveStatus : LeaveStatus.values()) {  
-            if  (leaveStatus.getStatus() == status) {  
-                return  leaveStatus;  
-            }  
-        }  
-        return   null ;  
-    }
 	
 	public static EnumMap<LeaveStatus, Integer> getEnumMap(){
 		EnumMap<LeaveStatus, Integer> enumMap = new EnumMap<>(LeaveStatus.class);
-		for (LeaveStatus leaveStatus: LeaveStatus.values()) {
-			enumMap.put(leaveStatus, leaveStatus.status);
+		for (LeaveStatus enumObject: LeaveStatus.values()) {
+			enumMap.put(enumObject, enumObject.status);
 		}
 		return enumMap;
 	}
@@ -78,30 +71,14 @@ public enum LeaveStatus implements IEnumFactory {
 		});
 		return enumMap;
 	}
-	
-	public static List<LeaveStatus> getSortValueList(){
-		List<LeaveStatus> list = new ArrayList<LeaveStatus>();
-		Integer[] array = new Integer[LeaveStatus.values().length];
-		for (int i = 0; i < LeaveStatus.values().length; i++) {
-			array[i] = LeaveStatus.values()[i].status;
-		}
-		Arrays.sort(array);
-		for (int i = 0; i < array.length; i++) {
-			list.add(LeaveStatus.getEnum(array[i]));
-		}
-		return list;
+
+	@Override
+	public LeaveStatus getEnumType() {
+		return this;
 	}
-	
-	public static LeaveStatus getEnumByNextValue(Integer status){
-		List<LeaveStatus> list = getSortValueList();
-		for (int i = 0; i < list.size(); i++) {
-			if(list.get(i).status == status){
-				if(list.size() > i+1){
-					return list.get(i+1);
-				}
-				break;
-			}
-		}
-		return null;
+
+	@Override
+	public LeaveStatus[] getEnumTypes() {
+		return LeaveStatus.values();
 	}
 }
