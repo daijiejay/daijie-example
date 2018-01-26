@@ -12,6 +12,7 @@ import org.activiti.engine.task.Task;
 import org.daijie.api.LeaveCloud;
 import org.daijie.api.enums.LeaveStatus;
 import org.daijie.core.controller.ApiController;
+import org.daijie.core.process.Process;
 import org.daijie.core.result.ApiResult;
 import org.daijie.core.result.ModelResult;
 import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
@@ -62,9 +63,9 @@ public class LeaveService extends ApiController implements LeaveCloud {
         variables.put("checkStatus", checkStatus);
         //设置下一流程审批人ID
         LeaveStatus leaveStatus = LeaveStatus.valueOf(task.getTaskDefinitionKey());
-        if(leaveStatus.nextProcess() != null){
+        if(leaveStatus.nextProcess(Process.THROUGH) != null){
         	if(LeaveStatus.PROJECT_LEADER.equals(leaveStatus) || LeaveStatus.PROJECT_MANAGER.equals(leaveStatus)){
-        		variables.put(leaveStatus.nextProcess().getAssignee(), nextUserId);
+        		variables.put(leaveStatus.nextProcess(Process.THROUGH).getAssignee(), nextUserId);
         	}
         }
         taskService.complete(task.getId(), variables);

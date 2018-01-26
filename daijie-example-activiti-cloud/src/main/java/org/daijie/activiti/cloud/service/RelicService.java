@@ -12,6 +12,7 @@ import org.activiti.engine.task.Task;
 import org.daijie.api.RelicCloud;
 import org.daijie.api.enums.RelicStatus;
 import org.daijie.core.controller.ApiController;
+import org.daijie.core.process.Process;
 import org.daijie.core.result.ApiResult;
 import org.daijie.core.result.ModelResult;
 import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
@@ -55,8 +56,8 @@ public class RelicService extends ApiController implements RelicCloud {
         variables.put("pay", pay);
         variables.put("repeat", "1");
         RelicStatus relicStatus = RelicStatus.valueOf(task.getTaskDefinitionKey());
-        if(relicStatus.nextProcess() != null){
-        	variables.put(relicStatus.nextProcess().getAssignee(), auditor);
+        if(relicStatus.nextProcess(Process.THROUGH) != null){
+        	variables.put(relicStatus.nextProcess(Process.THROUGH).getAssignee(), auditor);
         }
         taskService.complete(task.getId(), variables);
 		return Result.build(true);
@@ -95,8 +96,8 @@ public class RelicService extends ApiController implements RelicCloud {
 		
 		Map<String, Object> variables = new HashMap<String, Object>();
         RelicStatus relicStatus = RelicStatus.valueOf(task.getTaskDefinitionKey());
-        if(relicStatus.nextProcess() != null){
-        	variables.put(relicStatus.nextProcess().getAssignee(), auditor);
+        if(relicStatus.nextProcess(Process.THROUGH) != null){
+        	variables.put(relicStatus.nextProcess(Process.THROUGH).getAssignee(), auditor);
         }
         taskService.complete(task.getId(), variables);
 		return Result.build(true);
@@ -123,8 +124,8 @@ public class RelicService extends ApiController implements RelicCloud {
 		Integer nrOfCompletedInstances = (Integer) runtimeService.getVariable(task.getExecutionId(), "nrOfCompletedInstances");
 		if(nrOfCompletedInstances >= 2){
 			RelicStatus relicStatus = RelicStatus.valueOf(task.getTaskDefinitionKey());
-			if(relicStatus.nextProcess() != null){
-				variables.put(relicStatus.nextProcess().getAssignee(), customerService);
+			if(relicStatus.nextProcess(Process.THROUGH) != null){
+				variables.put(relicStatus.nextProcess(Process.THROUGH).getAssignee(), customerService);
 			}
 		}
         taskService.complete(task.getId(), variables);
@@ -184,8 +185,8 @@ public class RelicService extends ApiController implements RelicCloud {
 		runtimeService.setVariables(task.getExecutionId(), variables);
 		variables.put(assignee, vote);
         RelicStatus relicStatus = RelicStatus.valueOf(task.getTaskDefinitionKey());
-        if(relicStatus.nextProcess() != null){
-        	variables.put(relicStatus.nextProcess().getAssignee(), operator);
+        if(relicStatus.nextProcess(Process.THROUGH) != null){
+        	variables.put(relicStatus.nextProcess(Process.THROUGH).getAssignee(), operator);
         }
         taskService.complete(task.getId(), variables);
 		return Result.build(true);
