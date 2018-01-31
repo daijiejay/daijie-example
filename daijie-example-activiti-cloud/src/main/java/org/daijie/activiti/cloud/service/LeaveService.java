@@ -3,8 +3,6 @@ package org.daijie.activiti.cloud.service;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.activiti.engine.HistoryService;
-import org.activiti.engine.RepositoryService;
 import org.activiti.engine.RuntimeService;
 import org.activiti.engine.TaskService;
 import org.activiti.engine.runtime.ProcessInstance;
@@ -27,12 +25,6 @@ public class LeaveService extends ApiController implements LeaveCloud {
 	
 	@Autowired
 	private RuntimeService runtimeService;
-	
-	@Autowired
-	private HistoryService historyService;
-	
-	@Autowired
-	private RepositoryService repositoryService;
 
 	@Override
 	public ModelResult<Boolean> apply(String username, Integer days, Integer nextUserId) {

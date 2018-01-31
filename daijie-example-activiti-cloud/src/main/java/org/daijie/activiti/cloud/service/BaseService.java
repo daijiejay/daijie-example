@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.activiti.engine.HistoryService;
-import org.activiti.engine.RepositoryService;
 import org.activiti.engine.RuntimeService;
 import org.activiti.engine.TaskService;
 import org.activiti.engine.history.HistoricActivityInstance;
@@ -33,9 +32,6 @@ public class BaseService extends ApiController implements BaseCloud {
 	
 	@Autowired
 	private HistoryService historyService;
-	
-	@Autowired
-	private RepositoryService repositoryService;
 
 	@Override
 	public ModelResult<PageResult<Map<String, Object>>> getProcesses() {
