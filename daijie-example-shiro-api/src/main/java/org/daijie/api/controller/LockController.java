@@ -3,11 +3,12 @@ package org.daijie.api.controller;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
-import org.apache.log4j.Logger;
 import org.daijie.core.lock.Callback;
 import org.daijie.core.lock.LockTool;
 import org.daijie.core.result.ModelResult;
 import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class LockController {
 	
-	private static final Logger logger = Logger.getLogger(LockController.class);
+	private static final Logger logger = LoggerFactory.getLogger(LockController.class);
 
 	@ApiOperation(notes = "锁测试", value = "锁测试")
 	@RequestMapping(value = "testLock", method = RequestMethod.GET)

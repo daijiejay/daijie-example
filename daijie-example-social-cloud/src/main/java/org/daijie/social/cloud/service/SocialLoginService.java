@@ -2,7 +2,6 @@ package org.daijie.social.cloud.service;
 
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.log4j.Logger;
 import org.daijie.api.SocialLoginCloud;
 import org.daijie.core.controller.WebController;
 import org.daijie.social.login.LoginTool;
@@ -10,6 +9,8 @@ import org.daijie.social.login.SocialLoginType;
 import org.daijie.social.login.weixin.callback.WeixinLoginCallback;
 import org.daijie.social.login.weixin.model.WeixinError;
 import org.daijie.social.login.weixin.model.WeixinUserInfo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -21,7 +22,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class SocialLoginService extends WebController implements SocialLoginCloud {
 	
-	private static final Logger logger = Logger.getLogger(SocialLoginService.class);
+	private static final Logger logger = LoggerFactory.getLogger(SocialLoginService.class);
 
 	/**
 	 * 访问微信二维码
