@@ -1,7 +1,7 @@
 package org.daijie.api;
 
 import org.daijie.core.annotation.EnableParametersFilter;
-import org.daijie.core.lock.redis.EnableRedisLock;
+import org.daijie.core.lock.zk.EnableZkLock;
 import org.daijie.shiro.annotation.EnableShiro;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -11,7 +11,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
 @EnableShiro
-@EnableRedisLock
+@EnableZkLock
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
