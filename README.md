@@ -1,21 +1,22 @@
 # 架构拓朴图
 ![架构拓朴图](http://m.qpic.cn/psb?/V14KUPlZ1oRvxL/J822aSfSQFFJm4Gxj9tS7URLXaYb*cgq6uIcKYmB6jQ!/b/dPMAAAAAAAAA&bo=*QKAAgAAAAADB18!&rf=viewer_4&t=5)
 # 工程简介
-搭建分布式微服务架构系统，集成第三方框架应用及实现初步的简单实例。
+搭建java分布式微服务架构系统，集成第三方框架应用及实现初步的简单实例，跟进时代潮流，尽可能的用到项目中所有热门技术，从中学习与实现解决实际问题。
 
-结构介绍：后缀为server的表示工程为服务，后缀为cloud-api的表示为数据层提供者接口包，后缀为cloud的表示为提供者的具体实现微服务，后缀为api的表示为业务层接口微服务。
-cloud-api为pom依赖调用接口，除cloud-api其它工程都为启动微服务。
+结构介绍：后缀为server的表示为服务，后缀为cloud-api的表示为数据层提供者接口包，后缀为cloud的表示为提供者的具体实现微服务，后缀为api的表示为业务层接口微服务。
+cloud-api与model为pom依赖调用，除cloud-api其它工程都为启动微服务。
 
+## [相关文档](https://github.com/daijiejay/daijie)
 ---
-## eureka-service
+## eureka-server
 * eureka注册中心服务器。
 ## config
 * 配置中心集中式配置文件管理。
-## config-service
+## config-server
 * 配置中心服务器。
-## seluth-service
+## seluth-server
 * 微服务监控服务器。
-## admin-service
+## admin-server
 * 微服务监控与管理服务器。
 
 ---
