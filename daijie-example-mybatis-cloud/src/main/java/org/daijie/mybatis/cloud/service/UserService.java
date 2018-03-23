@@ -3,7 +3,6 @@ package org.daijie.mybatis.cloud.service;
 import java.util.List;
 
 import org.daijie.api.UserCloud;
-import org.daijie.core.controller.ApiController;
 import org.daijie.core.result.ModelResult;
 import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
 import org.daijie.mybatis.mapper.UserMapper;
@@ -13,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class UserService extends ApiController implements UserCloud {
+public class UserService implements UserCloud {
 	
 	@Autowired
 	private UserMapper userMapper;

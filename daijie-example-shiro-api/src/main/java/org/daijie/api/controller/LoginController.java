@@ -1,12 +1,8 @@
 package org.daijie.api.controller;
 
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-
 import java.util.ArrayList;
 
 import org.daijie.api.UserCloud;
-import org.daijie.core.controller.ApiController;
 import org.daijie.core.controller.enums.ResultCode;
 import org.daijie.core.result.ApiResult;
 import org.daijie.core.result.ModelResult;
@@ -20,9 +16,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @Api(description="用户登录")
-public class LoginController extends ApiController {
+public class LoginController {
 	
 	@Autowired
 	private UserCloud userCloud;

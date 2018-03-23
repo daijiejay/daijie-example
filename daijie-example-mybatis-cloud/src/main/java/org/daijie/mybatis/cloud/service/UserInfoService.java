@@ -3,7 +3,6 @@ package org.daijie.mybatis.cloud.service;
 import java.util.List;
 
 import org.daijie.api.UserInfoCloud;
-import org.daijie.core.controller.ApiController;
 import org.daijie.core.result.ModelResult;
 import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
 import org.daijie.jdbc.annotation.SelectDataSource;
@@ -14,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SelectDataSource(name = "demo2")
 @RestController
-public class UserInfoService extends ApiController implements UserInfoCloud {
+public class UserInfoService implements UserInfoCloud {
 	
 	@Autowired
 	private UserInfoMapper userInfoMapper;

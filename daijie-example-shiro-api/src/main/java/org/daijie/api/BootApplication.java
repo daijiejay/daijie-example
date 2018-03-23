@@ -1,6 +1,7 @@
 package org.daijie.api;
 
 import org.daijie.core.annotation.EnableParametersFilter;
+import org.daijie.core.controller.EnableExceptionHandler;
 import org.daijie.core.lock.zk.EnableZkLock;
 import org.daijie.shiro.annotation.EnableShiro;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,6 +18,7 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @EnableFeignClients
 @EnableEurekaClient
 @EnableParametersFilter
+@EnableExceptionHandler
 @RefreshScope
 public class BootApplication {
 
