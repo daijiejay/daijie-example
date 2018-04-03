@@ -12,7 +12,10 @@ import org.daijie.core.util.http.QrcodeUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import io.swagger.annotations.Api;
+
 @Controller
+@Api(description="二维码，直接浏览器访问地址http://localhost/prcode")
 public class QrcodeController {
 
 	@RequestMapping(value = "prcode")
