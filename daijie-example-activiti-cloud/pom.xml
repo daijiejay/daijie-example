@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.daijie</groupId>
 		<artifactId>daijie-example</artifactId>
-		<version>1.0.3-RELEASE</version>
+		<version>1.1.0-RELEASE</version>
 	</parent>
 	<artifactId>daijie-example-activiti-cloud</artifactId>
 	<name>daijie-example-activiti-cloud</name>
@@ -20,6 +20,20 @@
 			<artifactId>daijie-example-workflow-cloud-api</artifactId>
 			<version>${daijie.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-eureka</artifactId>
+			<version>1.4.4.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+		<dependency>
+    <groupId>org.apache.tapestry</groupId>
+    <artifactId>tapestry5-annotations</artifactId>
+    <version>5.4.3</version>
+</dependency>
 		<dependency>
 		    <groupId>org.activiti</groupId>
 		    <artifactId>activiti-spring-boot-starter-basic</artifactId>
@@ -37,7 +51,39 @@
 					<groupId>org.springframework</groupId>
 					<artifactId>spring-beans</artifactId>
 				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-core</artifactId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 	</dependencies>
+	<dependencyManagement>
+	    <dependencies>
+	        <dependency>
+	            <groupId>org.springframework.cloud</groupId>
+	            <artifactId>spring-cloud-config</artifactId>
+	            <version>2.0.0.M9</version>
+	            <type>pom</type>
+	            <scope>import</scope>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.springframework.cloud</groupId>
+	            <artifactId>spring-cloud-netflix</artifactId>
+	            <version>2.0.0.M8</version>
+	            <type>pom</type>
+	            <scope>import</scope>
+	        </dependency>
+	    </dependencies>
+	</dependencyManagement>
+	<repositories>
+	    <repository>
+	        <id>spring-milestones</id>
+	        <name>Spring Milestones</name>
+	        <url>https://repo.spring.io/libs-milestone</url>
+	        <snapshots>
+	            <enabled>false</enabled>
+	        </snapshots>
+	    </repository>
+	</repositories>
 </project>

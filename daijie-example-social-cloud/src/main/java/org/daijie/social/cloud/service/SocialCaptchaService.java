@@ -1,7 +1,6 @@
 package org.daijie.social.cloud.service;
 
 import org.daijie.api.SocialCaptchaCloud;
-import org.daijie.core.controller.ApiController;
 import org.daijie.core.result.ModelResult;
 import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
 import org.daijie.social.captcha.SocialCaptchaTool;
@@ -14,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2017年11月28日
  */
 @RestController
-public class SocialCaptchaService extends ApiController implements SocialCaptchaCloud {
+public class SocialCaptchaService implements SocialCaptchaCloud {
 
 	/**
 	 * 获取腾讯验证码

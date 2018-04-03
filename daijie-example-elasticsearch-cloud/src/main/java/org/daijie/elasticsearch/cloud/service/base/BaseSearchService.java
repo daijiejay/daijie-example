@@ -3,7 +3,6 @@ package org.daijie.elasticsearch.cloud.service.base;
 import java.io.Serializable;
 import java.util.NoSuchElementException;
 
-import org.daijie.core.controller.ApiController;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.NoRepositoryBean;
 
 @NoRepositoryBean
-public abstract class BaseSearchService <E,ID extends Serializable,R extends BaseSearchRepository<E,ID>> extends ApiController {
+public abstract class BaseSearchService <E,ID extends Serializable,R extends BaseSearchRepository<E,ID>> {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -26,8 +25,8 @@ public abstract class BaseSearchService <E,ID extends Serializable,R extends Bas
         return repository;
     }
 
-    public E getById(ID id) {//
-        return getRepository().findOne(id);
+	public E getById(ID id) {
+        return getRepository().findById(id).get();
     }
 
     public Iterable<E> listAll() {
@@ -43,7 +42,7 @@ public abstract class BaseSearchService <E,ID extends Serializable,R extends Bas
     }
 
     public void deleteById(ID id){
-        getRepository().delete(id);
+        getRepository().deleteById(id);
     }
 
     public E getByKey(String fieldName, Object value){

@@ -1,17 +1,17 @@
 package org.daijie.api;
 
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-
 import java.util.Iterator;
 
 import org.daijie.api.model.Blog;
 import org.daijie.core.result.ModelResult;
-import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 
 @Api(description="搜索引擎")
 @FeignClient(value="${feign.se-cloud}")

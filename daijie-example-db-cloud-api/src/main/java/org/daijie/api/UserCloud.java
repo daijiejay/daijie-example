@@ -1,17 +1,17 @@
 package org.daijie.api;
 
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-
 import java.util.List;
 
 import org.daijie.core.result.ModelResult;
 import org.daijie.mybatis.model.User;
-import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 
 @Api(description="用户管理")
 @FeignClient(value="${feign.db-cloud}")

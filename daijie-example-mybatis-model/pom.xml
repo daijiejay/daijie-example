@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.daijie</groupId>
 		<artifactId>daijie-example</artifactId>
-		<version>1.0.3-RELEASE</version>
+		<version>1.1.0-RELEASE</version>
 	</parent>
 	<artifactId>daijie-example-mybatis-model</artifactId>
 	<name>daijie-example-mybatis-model</name>
@@ -20,21 +20,11 @@
 			<artifactId>daijie-jdbc-spring-boot-starter</artifactId>
 			<version>${daijie.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>tk.mybatis</groupId>
-			<artifactId>mapper-spring-boot-starter</artifactId>
-			<version>1.1.7</version>
-		</dependency>
-		<dependency>
-			<groupId>tk.mybatis</groupId>
-			<artifactId>mapper</artifactId>
-			<version>3.4.6</version>
-		</dependency>
-		<dependency>
-				<groupId>org.daijie</groupId>
-				<artifactId>daijie-jdbc-plugin</artifactId>
-				<version>1.0.0-RELEASE</version>
-		</dependency>
+		<!-- <dependency>
+			<groupId>org.daijie</groupId>
+			<artifactId>daijie-jdbc-plugin</artifactId>
+			<version>1.0.0-RELEASE</version>
+		</dependency> -->
 	</dependencies>
 
 	<build>
@@ -52,7 +42,7 @@
 					<dependency>
 						<groupId>tk.mybatis</groupId>
 						<artifactId>mapper</artifactId>
-						<version>3.4.5</version>
+						<version>4.0.0</version>
 					</dependency>
 				</dependencies>
 			</plugin>

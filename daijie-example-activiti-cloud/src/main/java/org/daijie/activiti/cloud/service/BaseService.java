@@ -14,7 +14,6 @@ import org.activiti.engine.runtime.ProcessInstanceQuery;
 import org.activiti.engine.task.Task;
 import org.activiti.engine.task.TaskQuery;
 import org.daijie.api.BaseCloud;
-import org.daijie.core.controller.ApiController;
 import org.daijie.core.result.ModelResult;
 import org.daijie.core.result.PageResult;
 import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
@@ -22,7 +21,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class BaseService extends ApiController implements BaseCloud {
+public class BaseService implements BaseCloud {
 	
 	@Autowired
     private TaskService taskService;

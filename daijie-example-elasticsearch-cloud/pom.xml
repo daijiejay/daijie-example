@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.daijie</groupId>
 		<artifactId>daijie-example</artifactId>
-		<version>1.0.3-RELEASE</version>
+		<version>1.1.0-RELEASE</version>
 	</parent>
 	<artifactId>daijie-example-elasticsearch-cloud</artifactId>
 	<name>daijie-example-elasticsearch-cloud</name>
@@ -39,5 +39,20 @@
 			<artifactId>elasticsearch</artifactId>
 			<version>5.6.3</version>$NO-MVN-MAN-VER$
 		</dependency> -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<version>2.0.0.M2</version>
+		</dependency>
 	</dependencies>
+	<repositories>
+	    <repository>
+	        <id>spring-milestones</id>
+	        <name>Spring Milestones</name>
+	        <url>https://repo.spring.io/libs-milestone</url>
+	        <snapshots>
+	            <enabled>false</enabled>
+	        </snapshots>
+	    </repository>
+	</repositories>
 </project>

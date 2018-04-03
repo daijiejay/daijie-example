@@ -1,28 +1,26 @@
-package org.daijie.api;
+package org.daijie.oauth2.server;
 
 import org.daijie.core.annotation.EnableParametersFilter;
-import org.daijie.core.controller.EnableExceptionHandler;
-import org.daijie.core.lock.zk.EnableZkLock;
-import org.daijie.shiro.annotation.EnableShiro;
+import org.daijie.core.swagger.EnableMySwagger;
+import org.daijie.shiro.oauth2.annotation.EnableShiroOauth2SecurityServer;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
-@EnableShiro
-@EnableZkLock
+@EnableShiroOauth2SecurityServer
+@EnableParametersFilter
+@EnableMySwagger
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
 @EnableEurekaClient
-@EnableParametersFilter
-@EnableExceptionHandler
 @RefreshScope
-public class BootApplication {
+public class Oauth2StartUp {
 
 	public static void main(String[] args) {
-		new SpringApplicationBuilder(BootApplication.class).web(true).run(args);
+		SpringApplication.run(Oauth2StartUp.class, args);
 	}
 }

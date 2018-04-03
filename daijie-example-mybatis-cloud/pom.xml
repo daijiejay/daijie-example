@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.daijie</groupId>
 		<artifactId>daijie-example</artifactId>
-		<version>1.0.3-RELEASE</version>
+		<version>1.1.0-RELEASE</version>
 	</parent>
 	<artifactId>daijie-example-mybatis-cloud</artifactId>
 	<name>daijie-example-mybatis-cloud</name>
@@ -17,6 +17,11 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.daijie</groupId>
+			<artifactId>daijie-core-spring-boot-starter</artifactId>
+			<version>${daijie.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.daijie</groupId>
 			<artifactId>daijie-example-mybatis-model</artifactId>
 			<version>${daijie.version}</version>
 		</dependency>
@@ -25,5 +30,42 @@
 			<artifactId>daijie-example-db-cloud-api</artifactId>
 			<version>${daijie.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-eureka</artifactId>
+			<version>1.4.4.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
 	</dependencies>
+	<dependencyManagement>
+	    <dependencies>
+	        <dependency>
+	            <groupId>org.springframework.cloud</groupId>
+	            <artifactId>spring-cloud-config</artifactId>
+	            <version>2.0.0.M9</version>
+	            <type>pom</type>
+	            <scope>import</scope>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.springframework.cloud</groupId>
+	            <artifactId>spring-cloud-netflix</artifactId>
+	            <version>2.0.0.M8</version>
+	            <type>pom</type>
+	            <scope>import</scope>
+	        </dependency>
+	    </dependencies>
+	</dependencyManagement>
+	<repositories>
+	    <repository>
+	        <id>spring-milestones</id>
+	        <name>Spring Milestones</name>
+	        <url>https://repo.spring.io/libs-milestone</url>
+	        <snapshots>
+	            <enabled>false</enabled>
+	        </snapshots>
+	    </repository>
+	</repositories>
 </project>

@@ -9,7 +9,6 @@ import org.activiti.engine.runtime.ProcessInstance;
 import org.activiti.engine.task.Task;
 import org.daijie.api.LeaveCloud;
 import org.daijie.api.enums.LeaveStatus;
-import org.daijie.core.controller.ApiController;
 import org.daijie.core.process.Process;
 import org.daijie.core.result.ApiResult;
 import org.daijie.core.result.ModelResult;
@@ -18,7 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class LeaveService extends ApiController implements LeaveCloud {
+public class LeaveService implements LeaveCloud {
 	
 	@Autowired
     private TaskService taskService;

@@ -1,14 +1,18 @@
 package org.daijie.shiro.server;
 
 import org.daijie.shiro.security.annotation.EnableShiroSecurityServer;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 
 @EnableShiroSecurityServer
 @SpringBootApplication
-public class BootApplication {
+public class ShiroServerStartUp {
 
 	public static void main(String[] args) {
-		new SpringApplicationBuilder(BootApplication.class).web(true).run(args);
+		try {
+			SpringApplication.run(ShiroServerStartUp.class, args);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

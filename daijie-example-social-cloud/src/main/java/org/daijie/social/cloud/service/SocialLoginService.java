@@ -3,7 +3,6 @@ package org.daijie.social.cloud.service;
 import javax.servlet.http.HttpServletResponse;
 
 import org.daijie.api.SocialLoginCloud;
-import org.daijie.core.controller.WebController;
 import org.daijie.social.login.LoginTool;
 import org.daijie.social.login.SocialLoginType;
 import org.daijie.social.login.weixin.callback.WeixinLoginCallback;
@@ -20,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @since 2017年11月28日
  */
 @Controller
-public class SocialLoginService extends WebController implements SocialLoginCloud {
+public class SocialLoginService implements SocialLoginCloud {
 	
 	private static final Logger logger = LoggerFactory.getLogger(SocialLoginService.class);
 
