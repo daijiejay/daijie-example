@@ -30,11 +30,11 @@
 			<artifactId>mapper</artifactId>
 			<version>3.4.6</version>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 				<groupId>org.daijie</groupId>
 				<artifactId>daijie-jdbc-plugin</artifactId>
 				<version>1.0.0-RELEASE</version>
-		</dependency>
+		</dependency> -->
 	</dependencies>
 
 	<build>
