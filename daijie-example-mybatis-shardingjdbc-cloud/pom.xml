@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.daijie</groupId>
 		<artifactId>daijie-example</artifactId>
-		<version>1.0.3-RELEASE</version>
+		<version>1.0.4-RELEASE</version>
 	</parent>
 	<artifactId>daijie-example-mybatis-shardingjdbc-cloud</artifactId>
 	<name>daijie-example-mybatis-shardingjdbc-cloud</name>
@@ -27,8 +27,8 @@
 		</dependency>
 		<dependency>
 			<groupId>io.shardingjdbc</groupId>
-			<artifactId>sharding-jdbc-spring-boot-starter</artifactId>
-			<version>2.0.0.M3</version>
+		    <artifactId>sharding-jdbc-core-spring-boot-starter</artifactId>
+		    <version>2.0.3</version>
 			<exclusions>
 				<exclusion>
 					<groupId>com.google.guava</groupId>

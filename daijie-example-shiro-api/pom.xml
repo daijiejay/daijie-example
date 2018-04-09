@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.daijie</groupId>
 		<artifactId>daijie-example</artifactId>
-		<version>1.0.3-RELEASE</version>
+		<version>1.0.4-RELEASE</version>
 	</parent>
 	<artifactId>daijie-example-shiro-api</artifactId>
 	<name>daijie-example-shiro-api</name>
@@ -18,6 +18,11 @@
 		<dependency>
 			<groupId>org.daijie</groupId>
 			<artifactId>daijie-shiro-spring-boot-starter</artifactId>
+			<version>${daijie.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.daijie</groupId>
+			<artifactId>daijie-fastdfs-spring-boot-starter</artifactId>
 			<version>${daijie.version}</version>
 		</dependency>
 		<dependency>

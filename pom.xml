@@ -3,14 +3,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.daijie</groupId>
 	<artifactId>daijie-example</artifactId>
-	<version>1.0.3-RELEASE</version>
+	<version>1.0.4-RELEASE</version>
 	<packaging>pom</packaging>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
 		<spring.cloud.version>1.4.0.RELEASE</spring.cloud.version>
-		<spring.boot.version>1.5.9.RELEASE</spring.boot.version>
-		<daijie.version>1.0.3-RELEASE</daijie.version>
+		<spring.boot.version>1.5.10.RELEASE</spring.boot.version>
+		<daijie.version>1.0.4-RELEASE</daijie.version>
 		<!-- 打包跳过单元测试 -->
 		<skipTests>true</skipTests>
 	</properties>
