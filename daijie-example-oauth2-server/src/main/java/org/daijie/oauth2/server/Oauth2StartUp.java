@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.feign.EnableFeignClients;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @EnableShiroOauth2SecurityServer
 @EnableParametersFilter
@@ -21,6 +21,10 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 public class Oauth2StartUp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Oauth2StartUp.class, args);
+		try {
+			SpringApplication.run(Oauth2StartUp.class, args);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
