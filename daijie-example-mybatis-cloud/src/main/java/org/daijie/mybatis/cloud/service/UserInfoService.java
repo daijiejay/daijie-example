@@ -5,13 +5,11 @@ import java.util.List;
 import org.daijie.api.UserInfoCloud;
 import org.daijie.core.result.ModelResult;
 import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
-import org.daijie.jdbc.annotation.SelectDataSource;
 import org.daijie.mybatis.mapper.UserInfoMapper;
 import org.daijie.mybatis.model.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
-@SelectDataSource(name = "demo2")
 @RestController
 public class UserInfoService implements UserInfoCloud {
 	

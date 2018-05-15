@@ -17,6 +17,10 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 public class MybatisStartUp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MybatisStartUp.class, args);
+		try {
+			SpringApplication.run(MybatisStartUp.class, args);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

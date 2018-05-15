@@ -16,19 +16,6 @@ Date: 2017-11-22 17:24:28
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for blog
--- ----------------------------
-DROP TABLE IF EXISTS `blog`;
-CREATE TABLE `blog` (
-  `id` int(11) NOT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `tags` varchar(255) DEFAULT NULL,
-  `url` varchar(255) DEFAULT NULL,
-  `content` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
 -- Table structure for user
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
