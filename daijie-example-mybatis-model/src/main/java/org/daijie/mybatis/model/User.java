@@ -10,6 +10,7 @@ public class User implements Serializable {
      * 用户ID
      */
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
     private Integer userId;
 
