@@ -8,6 +8,7 @@ daijie-jpa-cloud:12808
 daijie-mybatis-cloud:12801
 daijie-mybatis-shardingjdbc-cloud:12810
 daijie-quartz-cloud:12805
+daijie-rabbit-cloud:12804
 daijie-social-cloud:12811
 daijie-shiro-api:12803
 daijie-shiro-security:12802
