@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 
 /**
  * 
@@ -36,7 +37,7 @@ public interface BaseCloud {
 	 */
 	@ApiOperation(value = "根据流程ID查询流程")
 	@RequestMapping(value = "flow/process/{id}", method = RequestMethod.GET)
-	public ModelResult<PageResult<Map<String, Object>>> getProcessById(@PathVariable(name = "id") Integer id);
+	public ModelResult<PageResult<Map<String, Object>>> getProcessById(@ApiParam(value = "流程ID") @PathVariable(name = "id") Integer id);
 	
 	/**
 	 * 根据处理人查询所有流程
@@ -45,5 +46,5 @@ public interface BaseCloud {
 	 */
 	@ApiOperation(value = "根据处理人查询所有流程")
 	@RequestMapping(value = "flow/process/operator/{assignee}", method = RequestMethod.GET)
-	public ModelResult<PageResult<Map<String, Object>>> getProcessByOperator(@PathVariable(name = "assignee") String assignee);
+	public ModelResult<PageResult<Map<String, Object>>> getProcessByOperator(@ApiParam(value = "处理人") @PathVariable(name = "assignee") String assignee);
 }

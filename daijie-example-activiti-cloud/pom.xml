@@ -13,6 +13,7 @@
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<org.activiti>7-201802-EA</org.activiti>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -30,11 +31,61 @@
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
 		<dependency>
-    <groupId>org.apache.tapestry</groupId>
-    <artifactId>tapestry5-annotations</artifactId>
-    <version>5.4.3</version>
-</dependency>
+		    <groupId>org.apache.tapestry</groupId>
+		    <artifactId>tapestry5-annotations</artifactId>
+		    <version>5.4.3</version>
+		</dependency>
 		<dependency>
+		    <groupId>org.activiti</groupId>
+		    <artifactId>activiti-spring</artifactId>
+		    <version>${org.activiti}</version>
+		</dependency>
+		<!-- <dependency>
+			<groupId>org.activiti</groupId>
+			<artifactId>activiti-image-generator</artifactId>
+		    <version>${org.activiti}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.activiti</groupId>
+			<artifactId>activiti-bpmn-model</artifactId>
+		    <version>${org.activiti}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.activiti</groupId>
+			<artifactId>activiti-bpmn-layout</artifactId>
+		    <version>${org.activiti}</version>
+		</dependency> -->
+		<!-- <dependency>
+			<groupId>org.activiti</groupId>
+			<artifactId>activiti-rest</artifactId>
+		    <version>6.0.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-log4j12</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.activiti</groupId>
+			<artifactId>activiti-common-rest</artifactId>
+		    <version>6.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.activiti</groupId>
+			<artifactId>activiti-crystalball</artifactId>
+		    <version>6.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.activiti</groupId>
+			<artifactId>activiti-cxf</artifactId>
+		    <version>6.0.0</version>
+		</dependency> -->
+		<!-- <dependency>
 		    <groupId>org.activiti</groupId>
 		    <artifactId>activiti-spring-boot-starter-basic</artifactId>
 		    <version>6.0.0</version>
@@ -56,7 +107,7 @@
 					<artifactId>spring-core</artifactId>
 				</exclusion>
 			</exclusions>
-		</dependency>
+		</dependency> -->
 	</dependencies>
 	<dependencyManagement>
 	    <dependencies>
