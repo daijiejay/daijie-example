@@ -38,11 +38,14 @@ public class LoginController {
 		User user = userCloud.getUser(username).getData();
 		Auth.login(username, password, user.getSalt(), user.getPassword(), user);
 		//加入角色权限
-		Auth.refreshRoles(new ArrayList<String>());
+		ArrayList<String> roles = new ArrayList<String>();
+		roles.add("USER");
+		roles.add("ADMIN");
+		Auth.refreshRoles(roles);
 		ArrayList<String> permissions = new ArrayList<String>();
-		permissions.add("USER");
+		permissions.add("SELECT");
+		permissions.add("UPDATE");
 		Auth.refreshPermissions(permissions);
-		Auth.getPermissions();
 		return Result.build("登录成功", ApiResult.SUCCESS, ResultCode.CODE_200);
 	}
 	
