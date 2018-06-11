@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 
 @Api(description="搜索引擎")
 @FeignClient(value="${feign.se-cloud}")
@@ -22,7 +23,7 @@ public interface BlogCloud {
 	public ModelResult<Iterator<Blog>> getBlog();
 	
 	@RequestMapping(value="/searchBlog/{id}", method=RequestMethod.GET)
-	public ModelResult<Blog> getBlog(@PathVariable Integer id);
+	public ModelResult<Blog> getBlog(@ApiParam(value = "文章ID") @PathVariable Integer id);
 	
 	@RequestMapping(value="/addBlog", method=RequestMethod.POST)
 	public ModelResult<Object> saveBlog(@RequestBody Blog blog);
