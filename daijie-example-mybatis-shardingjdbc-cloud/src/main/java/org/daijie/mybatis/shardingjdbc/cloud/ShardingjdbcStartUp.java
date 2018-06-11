@@ -15,6 +15,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 public class ShardingjdbcStartUp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ShardingjdbcStartUp.class, args);
+		try {
+			SpringApplication.run(ShardingjdbcStartUp.class, args);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

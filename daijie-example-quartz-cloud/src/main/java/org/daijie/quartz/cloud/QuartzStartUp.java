@@ -17,6 +17,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 public class QuartzStartUp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(QuartzStartUp.class, args);
+		try {
+			SpringApplication.run(QuartzStartUp.class, args);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

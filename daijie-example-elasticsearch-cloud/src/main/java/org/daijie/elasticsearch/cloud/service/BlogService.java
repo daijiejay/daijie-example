@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.annotations.ApiParam;
+
 @RestController
 public class BlogService extends BaseSearchService<Blog, Integer, BlogSearchRepository> implements BlogCloud {
 
@@ -21,7 +23,7 @@ public class BlogService extends BaseSearchService<Blog, Integer, BlogSearchRepo
 	}
 	
 	@Override
-	public ModelResult<Blog> getBlog(@PathVariable Integer id){
+	public ModelResult<Blog> getBlog(@ApiParam(value = "文章ID") @PathVariable Integer id){
 		return Result.build(this.getById(id));
 	}
 	

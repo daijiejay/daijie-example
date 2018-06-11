@@ -14,7 +14,10 @@ import org.daijie.core.result.ApiResult;
 import org.daijie.core.result.ModelResult;
 import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import io.swagger.annotations.ApiParam;
 
 @RestController
 public class RelicService implements RelicCloud {
@@ -26,7 +29,8 @@ public class RelicService implements RelicCloud {
 	private RuntimeService runtimeService;
 
 	@Override
-	public ModelResult<Boolean> apply(String username) {
+	public ModelResult<Boolean> apply(
+			@ApiParam(value = "备案人") @RequestParam(name = "username") String username) {
 		Map<String, Object> variables = new HashMap<String, Object>();
         variables.put("username", username);
 		runtimeService.startProcessInstanceByKey("relic", variables);
@@ -34,8 +38,11 @@ public class RelicService implements RelicCloud {
 	}
 
 	@Override
-	public ModelResult<Boolean> pay(String processInstanceId, String assignee,
-			Integer pay, String auditor) {
+	public ModelResult<Boolean> pay(
+			@ApiParam(value = "流程ID") @RequestParam(name = "processInstanceId") String processInstanceId, 
+			@ApiParam(value = "处理人") @RequestParam(name = "assignee") String assignee, 
+			@ApiParam(value = "支付状态") @RequestParam(name = "pay") Integer pay, 
+			@ApiParam(value = "初审人") String auditor) {
 		Task task = taskService.createTaskQuery().processInstanceId(processInstanceId)
 				.taskAssignee(assignee)
 				.singleResult();
@@ -55,8 +62,11 @@ public class RelicService implements RelicCloud {
 	}
 
 	@Override
-	public ModelResult<Boolean> trial(String processInstanceId,
-			String assignee, Integer trial, String[] reviewer) {
+	public ModelResult<Boolean> trial(
+			@ApiParam(value = "流程ID") @RequestParam(name = "processInstanceId") String processInstanceId, 
+			@ApiParam(value = "处理人") @RequestParam(name = "assignee") String assignee, 
+			@ApiParam(value = "初审状态") @RequestParam(name = "trial") Integer trial, 
+			@ApiParam(value = "复审人") String[] reviewer) {
 		Task task = taskService.createTaskQuery().processInstanceId(processInstanceId)
 				.taskAssignee(assignee)
 				.singleResult();
@@ -76,8 +86,10 @@ public class RelicService implements RelicCloud {
 	}
 
 	@Override
-	public ModelResult<Boolean> submit(String processInstanceId,
-			String assignee, String auditor) {
+	public ModelResult<Boolean> submit(
+			@ApiParam(value = "流程ID") @RequestParam(name = "processInstanceId") String processInstanceId, 
+			@ApiParam(value = "处理人") @RequestParam(name = "assignee") String assignee, 
+			@ApiParam(value = "初审人") String auditor) {
 		Task task = taskService.createTaskQuery().processInstanceId(processInstanceId)
 				.taskAssignee(assignee)
 				.singleResult();
@@ -95,8 +107,11 @@ public class RelicService implements RelicCloud {
 	}
 
 	@Override
-	public ModelResult<Boolean> review(String processInstanceId,
-			String assignee, Boolean vote, String customerService) {
+	public ModelResult<Boolean> review(
+			@ApiParam(value = "流程ID") @RequestParam(name = "processInstanceId") String processInstanceId, 
+			@ApiParam(value = "处理人") @RequestParam(name = "assignee") String assignee, 
+			@ApiParam(value = "投票") @RequestParam(name = "vote") Boolean vote, 
+			@ApiParam(value = "客服") String customerService) {
 		Task task = taskService.createTaskQuery().processInstanceId(processInstanceId)
 				.taskAssignee(assignee)
 				.singleResult();
@@ -124,8 +139,11 @@ public class RelicService implements RelicCloud {
 	}
 
 	@Override
-	public ModelResult<Boolean> appointment(String processInstanceId,
-			String assignee, Integer appointment, String customerService) {
+	public ModelResult<Boolean> appointment(
+			@ApiParam(value = "流程ID") @RequestParam(name = "processInstanceId") String processInstanceId, 
+			@ApiParam(value = "处理人") @RequestParam(name = "assignee") String assignee, 
+			@ApiParam(value = "是否预约成功") @RequestParam(name = "appointment") Integer appointment, 
+			@ApiParam(value = "客服") String customerService) {
 		Task task = taskService.createTaskQuery().processInstanceId(processInstanceId)
 				.taskAssignee(assignee)
 				.singleResult();
@@ -141,8 +159,11 @@ public class RelicService implements RelicCloud {
 	}
 
 	@Override
-	public ModelResult<Boolean> arrive(String processInstanceId,
-			String assignee, Integer arrive, String[] lastReviewer) {
+	public ModelResult<Boolean> arrive(
+			@ApiParam(value = "流程ID") @RequestParam(name = "processInstanceId") String processInstanceId, 
+			@ApiParam(value = "处理人") @RequestParam(name = "assignee") String assignee, 
+			@ApiParam(value = "是否到场") @RequestParam(name = "arrive") Integer arrive, 
+			@ApiParam(value = "终审人") String[] lastReviewer) {
 		Task task = taskService.createTaskQuery().processInstanceId(processInstanceId)
 				.taskAssignee(assignee)
 				.singleResult();
@@ -158,8 +179,11 @@ public class RelicService implements RelicCloud {
 	}
 
 	@Override
-	public ModelResult<Boolean> lastTrail(String processInstanceId,
-			String assignee, Boolean vote, String operator) {
+	public ModelResult<Boolean> lastTrail(
+			@ApiParam(value = "流程ID") @RequestParam(name = "processInstanceId") String processInstanceId, 
+			@ApiParam(value = "处理人") @RequestParam(name = "assignee") String assignee, 
+			@ApiParam(value = "投票") @RequestParam(name = "vote") Boolean vote, 
+			@ApiParam(value = "操作员") String operator) {
 		Task task = taskService.createTaskQuery().processInstanceId(processInstanceId)
 				.taskAssignee(assignee)
 				.singleResult();
@@ -184,7 +208,9 @@ public class RelicService implements RelicCloud {
 	}
 
 	@Override
-	public ModelResult<Boolean> record(String processInstanceId, String assignee) {
+	public ModelResult<Boolean> record(
+			@ApiParam(value = "流程ID") @RequestParam(name = "processInstanceId") String processInstanceId, 
+			@ApiParam(value = "处理人") @RequestParam(name = "assignee") String assignee) {
 		Task task = taskService.createTaskQuery().processInstanceId(processInstanceId)
 				.taskAssignee(assignee)
 				.singleResult();

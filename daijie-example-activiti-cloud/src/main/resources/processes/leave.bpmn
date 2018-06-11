@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
-  <process id="leave" name="leave" isExecutable="true">
+  <process id="leave" name="请假" isExecutable="true">
     <startEvent id="START" name="请假申请开始"></startEvent>
     <userTask id="APPLY" name="申请请假" activiti:assignee="#{username}">
       <extensionElements>
-        <activiti:taskListener event="assignment" class="org.daijie.activiti.cloud.listener.ApplyLeaveTaskListener"></activiti:taskListener>
+        <activiti:taskListener event="assignment" class="org.daijie.activiti.cloud.listener.leave.ApplyLeaveTaskListener"></activiti:taskListener>
       </extensionElements>
     </userTask>
     <userTask id="PROJECT_LEADER" name="项目组长审批" activiti:assignee="#{projectLeaderId}">
       <extensionElements>
-        <activiti:taskListener event="complete" class="org.daijie.activiti.cloud.listener.ProjectLeaderTaskListener"></activiti:taskListener>
+        <activiti:taskListener event="complete" class="org.daijie.activiti.cloud.listener.leave.ProjectLeaderTaskListener"></activiti:taskListener>
       </extensionElements>
     </userTask>
     <userTask id="PROJECT_MANAGER" name="项目经理审批" activiti:assignee="#{projectManagerId}">
       <extensionElements>
-        <activiti:taskListener event="complete" class="org.daijie.activiti.cloud.listener.ProjectManagerTaskListener"></activiti:taskListener>
+        <activiti:taskListener event="complete" class="org.daijie.activiti.cloud.listener.leave.ProjectManagerTaskListener"></activiti:taskListener>
       </extensionElements>
     </userTask>
     <userTask id="DEPARTMENT_MANAGER" name="部门经理审批" activiti:assignee="#{departmentManagerId}">
       <extensionElements>
-        <activiti:taskListener event="complete" class="org.daijie.activiti.cloud.listener.DepartmentManagerTaskListener"></activiti:taskListener>
+        <activiti:taskListener event="complete" class="org.daijie.activiti.cloud.listener.leave.DepartmentManagerTaskListener"></activiti:taskListener>
       </extensionElements>
     </userTask>
-    <serviceTask id="PERSONNEL" name="人事经理记录" activiti:class="org.daijie.activiti.cloud.listener.PersonnelManagerTaskListener"></serviceTask>
+    <serviceTask id="PERSONNEL" name="人事经理记录" activiti:class="org.daijie.activiti.cloud.listener.leave.PersonnelManagerTaskListener"></serviceTask>
     <endEvent id="COMPLATE" name="申请完成"></endEvent>
     <exclusiveGateway id="projectLeaderJudge" name="项目组长审批后条件判断"></exclusiveGateway>
     <exclusiveGateway id="departmentManagerJudge" name="部门经理审批后条件判断"></exclusiveGateway>

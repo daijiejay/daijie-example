@@ -13,6 +13,10 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 public class ElasticsearchStartUp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ElasticsearchStartUp.class, args);
+		try {
+			SpringApplication.run(ElasticsearchStartUp.class, args);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

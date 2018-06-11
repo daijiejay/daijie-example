@@ -20,6 +20,8 @@ import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.annotations.ApiParam;
+
 @RestController
 public class BaseService implements BaseCloud {
 	
@@ -65,7 +67,7 @@ public class BaseService implements BaseCloud {
 	}
 
 	@Override
-	public ModelResult<PageResult<Map<String, Object>>> getProcessById(Integer id) {
+	public ModelResult<PageResult<Map<String, Object>>> getProcessById(@ApiParam(value = "流程ID") Integer id) {
 		List<Map<String, Object>> rows = new ArrayList<>();
 		PageResult<Map<String, Object>> datas = new PageResult<>();
 		TaskQuery query = taskService.createTaskQuery().processInstanceId(id.toString());
@@ -97,7 +99,7 @@ public class BaseService implements BaseCloud {
 
 	@Override
 	public ModelResult<PageResult<Map<String, Object>>> getProcessByOperator(
-			String assignee) {
+			@ApiParam(value = "处理人") String assignee) {
 		List<Map<String, Object>> rows = new ArrayList<>();
 		PageResult<Map<String, Object>> datas = new PageResult<>();
 		TaskQuery query = taskService.createTaskQuery().taskAssignee(assignee);

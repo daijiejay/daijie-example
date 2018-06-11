@@ -17,6 +17,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 public class RabbitStartUp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RabbitStartUp.class, args);
+		try {
+			SpringApplication.run(RabbitStartUp.class, args);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
