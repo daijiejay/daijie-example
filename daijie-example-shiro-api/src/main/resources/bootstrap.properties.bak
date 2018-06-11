@@ -63,7 +63,7 @@ shiro.kissoEnable=true
 kisso.config.signkey=C691d971EJ3H376G81
 #cookie名称
 kisso.config.cookieName=token
-#cookie的作用域
+#cookie的作用域，只支持域名，本地可以配置host
 kisso.config.cookieDomain=daijie.org
 
 #redis分布式锁配置-----------------------------start
@@ -82,18 +82,19 @@ lock.redis.addresses=127.0.0.1:6379
 #lock.zk.maxRetries=3
 ##zookeeper分布式锁配置-----------------------------end
 
+swagger.groupNames=api
 #文档生成需要扫描的包路径，多个以“,”号隔开
-swagger.basePackage=org.daijie.api
+swagger.api.basePackage=org.daijie.api
 #标题
-swagger.title=
+swagger.api.title=
 #描述
-swagger.description=
+swagger.api.description=
 #路径
-swagger.termsOfServiceUrl=
+swagger.api.termsOfServiceUrl=
 #联系方式
-swagger.contact=
+swagger.api.contact=
 #版本
-swagger.version=1.0
+swagger.api.version=1.0
 
 #指定Log4j打印日志包路径的日志级别
 logging.level.org.daijie=DEBUG
