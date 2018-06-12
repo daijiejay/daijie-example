@@ -28,17 +28,9 @@ ribbon.MaxAutoRetries=1
 ribbon.MaxAutoRetriesNextServer=2
 
 #添加自定义Filter，以“,”号隔开
-shiro.filterClassNames=org.daijie.shiro.filter.SecurityFilter
-#登录过期跳转的访问路径
-shiro.loginUrl=/invalid
-#登录成功跳转的访问路径
-shiro.successUrl=/
-#无权限时跳转的访问路径
-shiro.unauthorizedUrl=/error
-#拦截访问路径，以“,”号隔开
-shiro.filterChainDefinitions=/**=anon,/api/user/**=security[USER]
-#拦截访问路径，json对象格式
-#shiro.filterChainDefinitionMap={"*/**":"anon"}
+shiro.filterClasses=org.daijie.shiro.filter.SecurityFilter
+#请求权限，比如请求路径/api/user，需要有角色为USER,ADMIN才能访问。（/api/user等于api_user，/api/user/**等于api_user_）
+shiro.matcher.api_user_=security[ADMIN,USER]
 
 #是否开启redis集群
 shiro.redis.cluster=false
