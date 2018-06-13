@@ -13,7 +13,7 @@
 
 # 工程简介
 ## 架构拓朴图
-![架构拓朴图](http://r.photo.store.qq.com/psb?/V14KUPlZ1oRvxL/qbb9dP6bu4r.OZTvV1.yh*bfCBBGtCtxldr.AVfC8Is!/r/dFoAAAAAAAAA)
+![架构拓朴图](http://r.photo.store.qq.com/psb?/V14KUPlZ1oRvxL/l5lv9b9w9HD*Aft9lyW0aLS1vdMgYQQvTmhTFPE5g9k!/r/dDABAAAAAAAA)
 ## 项目说明
 搭建java分布式微服务架构系统，集成第三方框架应用及实现初步的简单实例，跟进时代潮流，尽可能的用到项目中所有热门技术，从中学习与实现解决实际问题。
 
