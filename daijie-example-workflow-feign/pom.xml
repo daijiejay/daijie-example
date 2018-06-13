@@ -8,8 +8,8 @@
 		<artifactId>daijie-example</artifactId>
 		<version>1.1.0-RELEASE</version>
 	</parent>
-	<artifactId>daijie-example-workflow-cloud-api</artifactId>
-	<name>daijie-example-workflow-cloud-api</name>
+	<artifactId>daijie-example-workflow-feign</artifactId>
+	<name>daijie-example-workflow-feign</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

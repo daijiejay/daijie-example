@@ -8,8 +8,8 @@
 		<artifactId>daijie-example</artifactId>
 		<version>1.1.0-RELEASE</version>
 	</parent>
-	<artifactId>daijie-example-elasticsearch-cloud</artifactId>
-	<name>daijie-example-elasticsearch-cloud</name>
+	<artifactId>daijie-example-searchengine-feign</artifactId>
+	<name>daijie-example-searchengine-feign</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -17,37 +17,26 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.daijie</groupId>
-			<artifactId>daijie-example-searchengine-feign</artifactId>
+			<artifactId>daijie-core-spring-boot-starter</artifactId>
 			<version>${daijie.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
-			<version>1.4.4.RELEASE</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+			<version>2.0.0.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<version>2.0.0.M2</version>
+			<exclusions>
+				<exclusion>
+				    <groupId>com.google.guava</groupId>
+				    <artifactId>guava</artifactId>
+		        </exclusion>
+			</exclusions>
 		</dependency>
 	</dependencies>
-	<dependencyManagement>
-	    <dependencies>
-	        <dependency>
-	            <groupId>org.springframework.cloud</groupId>
-	            <artifactId>spring-cloud-config</artifactId>
-	            <version>2.0.0.M9</version>
-	            <type>pom</type>
-	            <scope>import</scope>
-	        </dependency>
-	        <dependency>
-	            <groupId>org.springframework.cloud</groupId>
-	            <artifactId>spring-cloud-netflix</artifactId>
-	            <version>2.0.0.M8</version>
-	            <type>pom</type>
-	            <scope>import</scope>
-	        </dependency>
-	    </dependencies>
-	</dependencyManagement>
 	<repositories>
 	    <repository>
 	        <id>spring-milestones</id>

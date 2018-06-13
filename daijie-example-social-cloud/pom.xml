@@ -22,7 +22,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.daijie</groupId>
-			<artifactId>daijie-example-social-cloud-api</artifactId>
+			<artifactId>daijie-example-social-feign</artifactId>
 			<version>${daijie.version}</version>
 		</dependency>
 		<dependency>
