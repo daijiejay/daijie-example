@@ -32,7 +32,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.daijie</groupId>
-			<artifactId>daijie-example-db-cloud-api</artifactId>
+			<artifactId>daijie-example-data-feign</artifactId>
 			<version>${daijie.version}</version>
 		</dependency>
 		<dependency>

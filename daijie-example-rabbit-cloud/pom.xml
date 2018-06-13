@@ -17,7 +17,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.daijie</groupId>
-			<artifactId>daijie-example-mq-cloud-api</artifactId>
+			<artifactId>daijie-example-queue-feign</artifactId>
 			<version>${daijie.version}</version>
 		</dependency>
 		<dependency>

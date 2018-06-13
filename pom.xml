@@ -34,14 +34,14 @@
 		<module>daijie-example-elasticsearch-cloud</module>
 		<module>daijie-example-jpa-cloud</module>
 		<module>daijie-example-social-cloud</module>
-		<module>daijie-example-db-cloud-api</module>
+		<module>daijie-example-data-feign</module>
 		<module>daijie-example-sleuth-server</module>
 		<module>daijie-example-eureka-server</module>
 		<module>daijie-example-config-server</module>
-		<module>daijie-example-mq-cloud-api</module>
-		<module>daijie-example-se-cloud-api</module>
-		<module>daijie-example-social-cloud-api</module>
-		<module>daijie-example-workflow-cloud-api</module>
+		<module>daijie-example-queue-feign</module>
+		<module>daijie-example-searchengine-feign</module>
+		<module>daijie-example-social-feign</module>
+		<module>daijie-example-workflow-feign</module>
 		<module>daijie-example-admin-server</module>
 		<module>daijie-example-shiro-server</module>
 		<module>daijie-example-oauth2-server</module>
