@@ -24,6 +24,8 @@
 > 数据层：利用防火墙限制只允许指定的内网机器访问，数据层的义务是接收业务层的业务处理对数据库增删改查。  
 > 数据模型：sdk包，通常是一些实体类映射数据库表，及一些单表基础操作增删改查的接口方法。    
 > feign接口：sdk包，提供微服务提供者实现接口和微服务消费者调用接口，微服务与微服务之间的数据通信。    
+> 服务治理：对所有微服务监控、配置、权限、文档和日志统一管理。    
+> 数据库：缓存数据库和持久化数据库的数据存储及查询。    
 
 这样搭建的优点：
 > 1、随着越来越大的业务量，分散在很多的机器上运行，对性能和容量是一个很大的提升。  
@@ -61,7 +63,7 @@
 * admin-server
 > 提供微服务监控与管理。
 * shiro-server [【daijie-shiro-security开发文档】](https://github.com/daijiejay/daijie/tree/master/daijie-shiro-security)
-> 提供shiro自定义配置用户角色权限，访问路径统一管理的安全节点服务，通过跳转访问api登录接口授权，
+> 提供shiro自定义配置用户角色权限，访问路径统一管理的安全节点服务，所有被拦截的服务提供集中式swagger文档，通过跳转访问api登录接口授权，
 > 授权完成后再验证跳转api接口访问服务，验证失败直接返回错误数据。
 * oauth2-server [【daijie-shiro-oauth2开发文档】](https://github.com/daijiejay/daijie/tree/master/daijie-shiro-oauth2)
 > 提供shiro自定义配置用户角色权限，访问路径统一管理的安全节点服务，通过oauth2协议访问授权接口，
