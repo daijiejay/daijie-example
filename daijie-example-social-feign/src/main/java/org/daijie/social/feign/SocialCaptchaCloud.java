@@ -1,4 +1,4 @@
-package org.daijie.api;
+package org.daijie.social.feign;
 
 import org.daijie.core.result.ModelResult;
 import org.springframework.cloud.openfeign.FeignClient;

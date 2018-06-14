@@ -2,9 +2,9 @@ package org.daijie.mybatis.cloud.service;
 
 import java.util.List;
 
-import org.daijie.api.UserCloud;
 import org.daijie.core.result.ModelResult;
 import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
+import org.daijie.data.feign.UserCloud;
 import org.daijie.mybatis.mapper.UserMapper;
 import org.daijie.mybatis.model.User;
 import org.daijie.mybatis.model.UserInfo;

@@ -2,7 +2,7 @@ package org.daijie.social.cloud.service;
 
 import javax.servlet.http.HttpServletResponse;
 
-import org.daijie.api.SocialLoginCloud;
+import org.daijie.social.feign.SocialLoginCloud;
 import org.daijie.social.login.LoginTool;
 import org.daijie.social.login.SocialLoginType;
 import org.daijie.social.login.weixin.callback.WeixinLoginCallback;

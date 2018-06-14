@@ -1,4 +1,4 @@
-package org.daijie.api.enums;
+package org.daijie.workflow.feign.enums;
 
 import org.daijie.core.process.TreeEnumProcess;
 import org.daijie.core.process.Process;

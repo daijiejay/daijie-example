@@ -1,12 +1,12 @@
 package org.daijie.api.controller;
 
-import org.daijie.api.UserCloud;
 import org.daijie.core.controller.enums.ResultCode;
 import org.daijie.core.result.ApiResult;
 import org.daijie.core.result.ModelResult;
 import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
 import org.daijie.core.util.encrypt.PasswordUtil;
 import org.daijie.core.util.encrypt.RSAUtil;
+import org.daijie.data.feign.UserCloud;
 import org.daijie.mybatis.model.User;
 import org.daijie.shiro.authc.Auth;
 import org.springframework.beans.factory.annotation.Autowired;

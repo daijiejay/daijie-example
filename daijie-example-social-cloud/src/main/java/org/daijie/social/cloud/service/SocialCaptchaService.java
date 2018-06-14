@@ -1,9 +1,9 @@
 package org.daijie.social.cloud.service;
 
-import org.daijie.api.SocialCaptchaCloud;
 import org.daijie.core.result.ModelResult;
 import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
 import org.daijie.social.captcha.SocialCaptchaTool;
+import org.daijie.social.feign.SocialCaptchaCloud;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 

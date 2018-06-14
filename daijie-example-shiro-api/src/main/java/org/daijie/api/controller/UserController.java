@@ -1,7 +1,7 @@
 package org.daijie.api.controller;
 
-import org.daijie.api.UserCloud;
 import org.daijie.core.result.ModelResult;
+import org.daijie.data.feign.UserCloud;
 import org.daijie.mybatis.model.User;
 import org.daijie.shiro.authc.Auth;
 import org.springframework.beans.factory.annotation.Autowired;
