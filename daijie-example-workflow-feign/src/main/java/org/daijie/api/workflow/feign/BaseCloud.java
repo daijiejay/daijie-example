@@ -1,4 +1,4 @@
-package org.daijie.workflow.feign;
+package org.daijie.api.workflow.feign;
 
 import java.util.Map;
 

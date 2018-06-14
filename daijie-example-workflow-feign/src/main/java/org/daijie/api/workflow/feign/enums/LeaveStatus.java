@@ -1,4 +1,4 @@
-package org.daijie.workflow.feign.enums;
+package org.daijie.api.workflow.feign.enums;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,4 +1,4 @@
-package org.daijie.social.feign;
+package org.daijie.api.social.feign;
 
 import javax.servlet.http.HttpServletResponse;
 

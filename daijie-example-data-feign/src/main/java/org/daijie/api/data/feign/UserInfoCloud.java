@@ -1,4 +1,4 @@
-package org.daijie.data.feign;
+package org.daijie.api.data.feign;
 
 import java.util.List;
 

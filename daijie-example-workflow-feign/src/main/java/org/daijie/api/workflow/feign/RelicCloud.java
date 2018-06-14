@@ -1,4 +1,4 @@
-package org.daijie.workflow.feign;
+package org.daijie.api.workflow.feign;
 
 import org.daijie.core.result.ModelResult;
 import org.springframework.cloud.openfeign.FeignClient;
