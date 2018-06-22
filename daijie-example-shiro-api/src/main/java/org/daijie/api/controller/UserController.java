@@ -1,8 +1,12 @@
 package org.daijie.api.controller;
 
-import org.daijie.api.UserCloud;
+import org.daijie.api.data.feign.UserCloud;
+import org.daijie.api.data.feign.request.user.UpdateUserRequest;
+import org.daijie.api.data.feign.response.user.UpdateUserResponse;
+import org.daijie.api.data.feign.response.user.UserResponse;
 import org.daijie.core.result.ModelResult;
-import org.daijie.mybatis.model.User;
+import org.daijie.core.util.encrypt.PasswordUtil;
+import org.daijie.core.util.encrypt.RSAUtil;
 import org.daijie.shiro.authc.Auth;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,8 +14,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.xiaoleilu.hutool.bean.BeanUtil;
+
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 
 @Api(description="用户管理")
 @RestController
@@ -23,16 +30,30 @@ public class UserController {
 	
 	@ApiOperation(notes = "获取当前登录用户信息", value = "获取当前登录用户信息")
 	@RequestMapping(value = "", method = RequestMethod.GET)
-	public ModelResult<User> getUser(){
-		User user = Auth.getAuthc(User.class);
-		return userCloud.getUser(user.getUserId());
+	public ModelResult<UserResponse> getUser(){
+		UserResponse user = Auth.getAuthc(UserResponse.class);
+		return userCloud.getUserById(user.getUserId());
 	}
 
 	@ApiOperation(notes = "修改登录密码", value = "修改登录密码")
 	@RequestMapping(value = "/modify/password", method = RequestMethod.POST)
-	public ModelResult<Boolean> modifyPassword(@RequestParam(name = "password") String password){
-		User user = Auth.getAuthc(User.class);
-		user.setPassword(password);
-		return userCloud.updateUser(user);
+	public ModelResult<UpdateUserResponse> modifyPassword(@ApiParam(value="密码") @RequestParam(name = "password") String password) throws Exception{
+		//公钥传给客户端
+		String publicKey = Auth.getPublicKey();
+		//客户端调用接口时进行公钥加密后传参调用此接口
+		password = RSAUtil.encryptByPubKey(password, publicKey);
+		
+		String salt = PasswordUtil.generateSalt();
+		String saltPassword = PasswordUtil.generatePassword(password, salt.getBytes());
+		
+		UserResponse user = Auth.getAuthc(UserResponse.class);
+		user.setSalt(salt);
+		user.setPassword(saltPassword);
+		
+		UpdateUserRequest updateUserRequest = new UpdateUserRequest();
+		BeanUtil.copyProperties(user, updateUserRequest);
+		updateUserRequest.setSalt(salt);
+		updateUserRequest.setPassword(saltPassword);
+		return userCloud.updateUser(updateUserRequest);
 	}
 }

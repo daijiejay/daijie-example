@@ -1,6 +1,6 @@
 package org.daijie.rabbit.cloud.service;
 
-import org.daijie.api.RabbitMQCloud;
+import org.daijie.api.queue.feign.RabbitMQCloud;
 import org.daijie.core.result.ModelResult;
 import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
 import org.daijie.rabbit.cloud.mq.producer.ProducerTest;

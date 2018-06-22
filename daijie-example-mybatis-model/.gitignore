@@ -1,2 +1,9 @@
-/target/
+*.versionsBackup
+*.classpath
+*.project
+*.factorypath
+*.springBeans
+/.settings/
 /.apt_generated/
+/target/
+/transaction-logs/

@@ -2,7 +2,7 @@ package org.daijie.jpa.cloud.service;
 
 import java.util.List;
 
-import org.daijie.api.UserInfoCloud;
+import org.daijie.api.data.feign.UserInfoCloud;
 import org.daijie.core.result.ModelResult;
 import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
 import org.daijie.jpa.cloud.dao.UserInfoRepository;

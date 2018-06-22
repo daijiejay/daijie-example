@@ -1,6 +1,6 @@
 package org.daijie.social.cloud.service;
 
-import org.daijie.api.SocialCaptchaCloud;
+import org.daijie.api.social.feign.SocialCaptchaCloud;
 import org.daijie.core.result.ModelResult;
 import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
 import org.daijie.social.captcha.SocialCaptchaTool;
