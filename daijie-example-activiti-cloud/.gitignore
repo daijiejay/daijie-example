@@ -3,6 +3,8 @@
 *.project
 *.factorypath
 *.springBeans
+*.log
+*.lck
 /.settings/
 /.apt_generated/
 /target/
