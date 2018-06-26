@@ -3,12 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.daijie</groupId>
 	<artifactId>daijie-example</artifactId>
-	<version>1.1.1-RELEASE</version>
+	<version>1.1.2-RELEASE</version>
 	<packaging>pom</packaging>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
-		<daijie.version>1.1.1-RELEASE</daijie.version>
+		<daijie.version>1.1.2-RELEASE</daijie.version>
 		<!-- 打包跳过单元测试 -->
 		<skipTests>true</skipTests>
 	</properties>
