@@ -1,11 +1,15 @@
 package org.daijie.api.data.feign.request.user;
 
+import java.io.Serializable;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 @ApiModel(description = "添加用户")
-public class AddUserRequest {
+public class AddUserRequest implements Serializable {
 	
+	private static final long serialVersionUID = 2652490223790488587L;
+
 	@ApiModelProperty(name = "userName", value = "用户名", required = true)
 	private String userName;
 	

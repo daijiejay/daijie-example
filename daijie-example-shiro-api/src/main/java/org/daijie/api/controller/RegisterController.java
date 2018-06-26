@@ -36,10 +36,10 @@ public class RegisterController {
 		//公钥传给客户端
 		String publicKey = Auth.getPublicKey();
 		//客户端调用登录接口时进行公钥加密后传参调用此接口
-		password = RSAUtil.encryptByPubKey(password, publicKey);
+		String pubKeyPassword = RSAUtil.encryptByPubKey(password, publicKey);
 
 		UserResponse user = userCloud.getUserByUsername(username).getData();
-		if(user != null){
+		if(user != null && user.getUserId() != null){
 			return Result.build("该账号已注册", ApiResult.SUCCESS, ResultCode.CODE_200);
 		}
 		
@@ -55,7 +55,7 @@ public class RegisterController {
 			return Result.build("注册失败", ApiResult.SUCCESS, ResultCode.CODE_200);
 		}
 		user = userCloud.getUserByUsername(username).getData();
-		Auth.login(username, password, user.getSalt(), user.getPassword(), "user", user);
+		Auth.login(username, pubKeyPassword, user.getSalt(), user.getPassword(), "user", user);
 		return Result.build("注册并登录成功", ApiResult.SUCCESS, ResultCode.CODE_200);
 	}
 }

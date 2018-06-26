@@ -10,7 +10,6 @@ import org.daijie.core.result.ModelResult;
 import org.daijie.core.result.PageResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -27,7 +26,7 @@ public interface UserCloud {
 	
 	@ApiOperation(notes = "获取全部用户信息", value = "获取全部用户信息")
 	@RequestMapping(value = "/user/all", method = RequestMethod.GET)
-	public ModelResult<PageResult<UserResponse>> getUserAll(@RequestBody UserRequest userRequest);
+	public ModelResult<PageResult<UserResponse>> getUserAll(UserRequest userRequest);
 	
 	@ApiOperation(notes = "根据用户名获取用户信息", value = "根据用户名获取用户信息")
 	@RequestMapping(value = "/user/username/{userName}", method = RequestMethod.GET)
@@ -35,9 +34,9 @@ public interface UserCloud {
 	
 	@ApiOperation(notes = "修改用户", value = "修改用户")
 	@RequestMapping(value = "/user", method = RequestMethod.PUT)
-	public ModelResult<UpdateUserResponse> updateUser(@RequestBody UpdateUserRequest userRequest);
+	public ModelResult<UpdateUserResponse> updateUser(UpdateUserRequest userRequest);
 	
 	@ApiOperation(notes = "添加用户", value = "添加用户")
 	@RequestMapping(value = "/user", method = RequestMethod.POST)
-	public ModelResult<AddUserResponse> addUser(@RequestBody AddUserRequest userRequest);
+	public ModelResult<AddUserResponse> addUser(AddUserRequest userRequest);
 }
