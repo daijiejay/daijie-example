@@ -22,7 +22,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.xiaoleilu.hutool.bean.BeanUtil;
+
+import cn.hutool.core.bean.BeanUtil;
 
 @RestController
 public class UserService implements UserCloud {

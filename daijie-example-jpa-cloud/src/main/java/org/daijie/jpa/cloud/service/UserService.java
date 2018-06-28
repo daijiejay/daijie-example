@@ -21,7 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.xiaoleilu.hutool.bean.BeanUtil;
+import cn.hutool.core.bean.BeanUtil;
 
 @RestController
 public class UserService implements UserCloud {
