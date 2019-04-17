@@ -6,3 +6,7 @@ eureka.instance.preferIpAddress: true
 
 spring.cloud.config.server.git.uri: https://github.com/daijiejay/daijie-example.git
 spring.cloud.config.server.git.searchPaths: daijie-example-govern/daijie-example-govern-config/config
+spring:
+  cloud:
+    config:
+      label=develop: develop

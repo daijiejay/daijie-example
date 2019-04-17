@@ -22,6 +22,11 @@
             <version>${daijie.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.daijie</groupId>
+            <artifactId>daijie-workflow-spring-boot-starter</artifactId>
+            <version>${daijie.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
             <version>${spring.cloud.version}</version>
