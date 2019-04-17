@@ -1,11 +1,11 @@
 #服务名称
-spring.application.name=daijie-api-cloud
+spring.application.name=api-demo
 #服务端口号
 server.port=80
 
 #调用服务名称
-feign.db-cloud=daijie-db-cloud
-feign.rabbit-cloud=daijie-mq-cloud
+feign.services-module-demo=services-module-demo
+feign.services-special-rabbitmq=services-special-rabbitmq
 
 #eureka注册中心地址
 eureka.client.serviceUrl.defaultZone=http://127.0.0.1:8761/eureka/

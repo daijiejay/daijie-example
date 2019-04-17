@@ -1,5 +1,5 @@
 #服务名称
-spring.application.name=daijie-admin-server
+spring.application.name=govern-springbootadmin
 #服务端口号
 server.port=12812
 

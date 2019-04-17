@@ -1,5 +1,5 @@
 #服务名称
-spring.application.name=daijie-workflow-cloud
+spring.application.name=services-special-activiti
 #服务端口号
 server.port=12806
 

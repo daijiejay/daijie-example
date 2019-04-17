@@ -1,4 +1,4 @@
-package org.daijie.rabbit.cloud;
+package org.daijie.example.services.special.rabbitmq;
 
 import org.daijie.core.swagger.EnableMySwagger;
 import org.springframework.boot.SpringApplication;

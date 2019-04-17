@@ -1,4 +1,4 @@
-package org.daijie.quartz.cloud.schedule;
+package org.daijie.example.services.special.job.schedule;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

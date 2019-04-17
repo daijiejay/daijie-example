@@ -1,4 +1,4 @@
-package org.daijie.api;
+package org.daijie.example.common.feign.workflow;
 
 import java.util.Map;
 
@@ -19,7 +19,7 @@ import io.swagger.annotations.ApiParam;
  * @since 2017年12月8日
  */
 @Api(description = "流程管理")
-@FeignClient(value="${feign.workflow-cloud}")
+@FeignClient(value="${feign.services-special-activiti}")
 public interface BaseCloud {
 
 	/**

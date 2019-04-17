@@ -1,4 +1,4 @@
-package org.daijie.activiti.cloud.listener.relic;
+package org.daijie.example.services.special.workflow.listener.relic;
 
 import org.activiti.engine.delegate.DelegateExecution;
 import org.activiti.engine.delegate.JavaDelegate;

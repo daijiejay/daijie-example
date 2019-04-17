@@ -1,5 +1,5 @@
 #服务名称
-spring.application.name=daijie-sleuth-server
+spring.application.name=govern-sleuth
 #服务端口号
 server.port=12809
 

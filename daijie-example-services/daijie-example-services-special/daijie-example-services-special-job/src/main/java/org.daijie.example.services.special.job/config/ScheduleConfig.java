@@ -1,4 +1,4 @@
-package org.daijie.quartz.cloud.config;
+package org.daijie.example.services.special.job.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.SchedulingConfigurer;

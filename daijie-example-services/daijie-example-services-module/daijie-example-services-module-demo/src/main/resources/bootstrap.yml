@@ -3,4 +3,4 @@ spring:
         config:
             uri: http://localhost:12800/
             name: daijie
-            profile: demo-server
+            profile: services-module-demo

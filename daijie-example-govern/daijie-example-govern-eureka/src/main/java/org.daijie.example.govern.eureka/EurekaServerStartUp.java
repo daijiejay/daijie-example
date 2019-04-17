@@ -1,4 +1,4 @@
-package org.daijie.eureka.server;
+package org.daijie.example.govern.eureka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

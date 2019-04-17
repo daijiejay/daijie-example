@@ -1,5 +1,5 @@
 #服务名称
-spring.application.name=deco-server
+spring.application.name=services-module-demo
 #服务端口号
 server.port=12801
 

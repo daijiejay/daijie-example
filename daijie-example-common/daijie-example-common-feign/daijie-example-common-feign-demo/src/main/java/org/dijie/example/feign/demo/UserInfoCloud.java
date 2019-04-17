@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.List;
 
 @Api(description="用户信息管理")
-@FeignClient(value="${feign.demo-server}")
+@FeignClient(value="${feign.services-module-demo}")
 public interface UserInfoCloud {
 	
 	@ApiOperation(notes = "根据用户ID获取用户信息", value = "根据用户ID获取用户信息")

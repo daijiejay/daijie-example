@@ -1,4 +1,4 @@
-package org.daijie.admin.server;
+package org.daijie.example.govern.springbootadmin;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

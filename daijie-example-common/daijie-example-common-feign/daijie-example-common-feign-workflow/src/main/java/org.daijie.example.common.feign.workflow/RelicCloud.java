@@ -1,4 +1,4 @@
-package org.daijie.api;
+package org.daijie.example.common.feign.workflow;
 
 import org.daijie.core.result.ModelResult;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -16,7 +16,7 @@ import io.swagger.annotations.ApiParam;
  * @since 2018年1月9日
  */
 @Api(description = "文物备案流程案例")
-@FeignClient(value="${feign.workflow-cloud}")
+@FeignClient(value="${feign.services-special-activiti}")
 public interface RelicCloud {
 
 	/**

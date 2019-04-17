@@ -1,5 +1,5 @@
 #服务名称
-spring.application.name=daijie-shiro-server
+spring.application.name=gate-server
 #服务端口号
 server.port=12802
 

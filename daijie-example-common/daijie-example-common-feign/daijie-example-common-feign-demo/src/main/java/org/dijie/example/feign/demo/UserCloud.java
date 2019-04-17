@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Api(description="用户管理")
-@FeignClient(value="${feign.db-cloud}")
+@FeignClient(value="${feign.services-module-demo}")
 public interface UserCloud {
 	
 	@ApiOperation(notes = "根据用户ID获取用户信息", value = "根据用户ID获取用户信息")

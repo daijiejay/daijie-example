@@ -1,4 +1,4 @@
-spring.application.name: daijie-eureka-server
+spring.application.name: govern-eureka
 server.port: 8761
 
 eureka.client.registerWithEureka: false

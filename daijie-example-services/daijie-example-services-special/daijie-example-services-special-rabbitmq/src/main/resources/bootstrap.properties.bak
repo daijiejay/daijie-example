@@ -1,10 +1,10 @@
 #服务名称
-spring.application.name=daijie-mq-cloud
+spring.application.name=services-special-rabbitmq
 #服务端口号
 server.port=12804
 
 #调用服务名称
-feign.mybatis-cloud=daijie-mybatis-cloud
+feign.services-module-demo=services-module-demo
 
 #mq服务地址
 spring.rabbitmq.host=localhost

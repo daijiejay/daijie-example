@@ -1,4 +1,4 @@
-package org.daijie.activiti.cloud;
+package org.daijie.example.services.special.workflow;
 
 import org.daijie.core.swagger.EnableMySwagger;
 import org.daijie.workflow.activiti.EnableActiviti;

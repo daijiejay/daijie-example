@@ -1,4 +1,4 @@
-package org.daijie.activiti.cloud.service;
+package org.daijie.example.services.special.workflow.service;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -7,12 +7,12 @@ import java.util.Map;
 import org.activiti.engine.RuntimeService;
 import org.activiti.engine.TaskService;
 import org.activiti.engine.task.Task;
-import org.daijie.api.workflow.feign.RelicCloud;
-import org.daijie.api.workflow.feign.enums.RelicStatus;
 import org.daijie.core.process.Process;
 import org.daijie.core.result.ApiResult;
 import org.daijie.core.result.ModelResult;
 import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
+import org.daijie.example.common.feign.workflow.RelicCloud;
+import org.daijie.example.common.feign.workflow.enums.RelicStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

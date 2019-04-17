@@ -1,7 +1,7 @@
-package org.daijie.rabbit.cloud.mq.consumer;
+package org.daijie.example.services.special.rabbitmq.mq.consumer;
 
 import org.daijie.core.util.SerializeUtil;
-import org.daijie.mybatis.model.User;
+import org.daijie.example.common.model.demo.entity.User;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;

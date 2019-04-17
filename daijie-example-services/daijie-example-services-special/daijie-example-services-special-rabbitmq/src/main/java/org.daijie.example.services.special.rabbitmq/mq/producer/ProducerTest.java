@@ -1,6 +1,6 @@
-package org.daijie.rabbit.cloud.mq.producer;
+package org.daijie.example.services.special.rabbitmq.mq.producer;
 
-import org.daijie.mybatis.model.User;
+import org.daijie.example.common.model.demo.entity.User;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
