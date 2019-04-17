@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>daijie-example-services-special</artifactId>
+        <groupId>org.daijie</groupId>
+        <version>2.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>daijie-example-services-special-activiti</artifactId>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.cloud.version>2.1.1.RELEASE</spring.cloud.version>
+        <org.activiti.version>7-201802-EA</org.activiti.version>
+        <apache.tapestry.version>5.4.3</apache.tapestry.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.daijie</groupId>
+            <artifactId>daijie-example-common-feign-workflow</artifactId>
+            <version>${daijie.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <version>${spring.cloud.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+            <version>${spring.cloud.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tapestry</groupId>
+            <artifactId>tapestry5-annotations</artifactId>
+            <version>${apache.tapestry.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.activiti</groupId>
+            <artifactId>activiti-spring</artifactId>
+            <version>${org.activiti.version}</version>
+        </dependency>
+    </dependencies>
+
+
+</project>

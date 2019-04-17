@@ -1,6 +1,0 @@
-spring:
-    cloud:
-        config:
-            uri: http://localhost:12800/
-            name: daijie
-            profile: elasticsearch-cloud

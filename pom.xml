@@ -3,12 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.daijie</groupId>
 	<artifactId>daijie-example</artifactId>
-	<version>1.1.2-RELEASE</version>
+	<version>2.0.0</version>
 	<packaging>pom</packaging>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
-		<daijie.version>1.1.2-RELEASE</daijie.version>
+		<daijie.version>2.0.0</daijie.version>
 		<!-- 打包跳过单元测试 -->
 		<skipTests>true</skipTests>
 	</properties>
@@ -24,26 +24,10 @@
 		</plugins>
 	</build>
 	<modules>
-		<module>daijie-example-mybatis-model</module>
-		<module>daijie-example-mybatis-cloud</module>
-		<module>daijie-example-mybatis-shardingjdbc-cloud</module>
-		<module>daijie-example-rabbit-cloud</module>
-		<module>daijie-example-quartz-cloud</module>
-		<module>daijie-example-shiro-api</module>
-		<module>daijie-example-activiti-cloud</module>
-		<module>daijie-example-elasticsearch-cloud</module>
-		<module>daijie-example-jpa-cloud</module>
-		<module>daijie-example-social-cloud</module>
-		<module>daijie-example-data-feign</module>
-		<module>daijie-example-sleuth-server</module>
-		<module>daijie-example-eureka-server</module>
-		<module>daijie-example-config-server</module>
-		<module>daijie-example-queue-feign</module>
-		<module>daijie-example-searchengine-feign</module>
-		<module>daijie-example-social-feign</module>
-		<module>daijie-example-workflow-feign</module>
-		<module>daijie-example-admin-server</module>
-		<module>daijie-example-shiro-server</module>
-		<module>daijie-example-oauth2-server</module>
-  </modules>
+		<module>daijie-example-common</module>
+		<module>daijie-example-gate</module>
+		<module>daijie-example-api</module>
+		<module>daijie-example-services</module>
+		<module>daijie-example-govern</module>
+	</modules>
 </project>

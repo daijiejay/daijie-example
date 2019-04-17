@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>daijie-example-common-feign</artifactId>
+        <groupId>org.daijie</groupId>
+        <version>2.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>daijie-example-common-feign-demo</artifactId>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.cloud.version>2.1.1.RELEASE</spring.cloud.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.daijie</groupId>
+            <artifactId>daijie-core-spring-boot-starter</artifactId>
+            <version>${daijie.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.daijie</groupId>
+            <artifactId>daijie-example-common-model-demo</artifactId>
+            <version>${daijie.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.daijie</groupId>
+                    <artifactId>daijie-jdbc-spring-boot-starter</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>${spring.cloud.version}</version>
+        </dependency>
+    </dependencies>
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/libs-milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+
+</project>
