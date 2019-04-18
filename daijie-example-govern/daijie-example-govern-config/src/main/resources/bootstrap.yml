@@ -1,12 +1,18 @@
-spring.application.name: govern-config
-server.port: 12800
-
-eureka.client.serviceUrl.defaultZone: http://127.0.0.1:8761/eureka/
-eureka.instance.preferIpAddress: true
-
-spring.cloud.config.server.git.uri: https://github.com/daijiejay/daijie-example.git
-spring.cloud.config.server.git.searchPaths: daijie-example-govern/daijie-example-govern-config/config
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+    preferIpAddress: true
+server:
+  port: 12800
 spring:
+  application:
+    name: govern-config
   cloud:
     config:
-      label=develop: develop
+      label: develop
+      server:
+        git:
+          searchPaths: daijie-example-govern/daijie-example-govern-config/config
+          uri: https://github.com/daijiejay/daijie-example.git

@@ -15,7 +15,6 @@
         <module>daijie-example-govern-eureka</module>
         <module>daijie-example-govern-springbootadmin</module>
         <module>daijie-example-govern-config</module>
-        <module>daijie-example-govern-sleuth</module>
     </modules>
 
 

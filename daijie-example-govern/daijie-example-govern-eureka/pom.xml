@@ -12,6 +12,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.cloud.verison>2.1.1.RELEASE</spring.cloud.verison>
+        <google.code.gson.verison>2.8.5</google.code.gson.verison>
     </properties>
     <dependencies>
         <dependency>
@@ -19,7 +20,11 @@
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
             <version>${spring.cloud.verison}</version>
         </dependency>
+        <!--2.1.1版本需要升级google.code.gson到2.6.0以上版本-->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${google.code.gson.verison}</version>
+        </dependency>
     </dependencies>
-
-
 </project>
