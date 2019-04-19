@@ -15,9 +15,14 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>org.daijie</groupId>
-            <artifactId>daijie-core-spring-boot-starter</artifactId>
-            <version>${daijie.version}</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <version>${spring.cloud.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+            <version>${spring.cloud.version}</version>
         </dependency>
         <dependency>
             <groupId>org.daijie</groupId>
@@ -33,16 +38,6 @@
             <groupId>org.daijie</groupId>
             <artifactId>daijie-example-common-model-demo</artifactId>
             <version>${daijie.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-            <version>${spring.cloud.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
-            <version>${spring.cloud.version}</version>
         </dependency>
     </dependencies>
 

@@ -1,6 +1,19 @@
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://127.0.0.1:8761/eureka/
+    instance:
+        preferIpAddress: true
+server:
+    port: 12805
 spring:
+    application:
+        name: services-special-job
     cloud:
         config:
-            uri: http://localhost:12800/
+            discovery:
+                enabled: true
+                serviceId: govern-config
+            label: develop
             name: daijie
             profile: services-special-job

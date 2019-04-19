@@ -1,5 +1,9 @@
-spring.application.name: govern-eureka
-server.port: 8761
-
-eureka.client.registerWithEureka: false
-eureka.client.fetchRegistry: false
+eureka:
+  client:
+    fetchRegistry: false
+    registerWithEureka: false
+server:
+  port: 8761
+spring:
+  application:
+    name: govern-eureka
