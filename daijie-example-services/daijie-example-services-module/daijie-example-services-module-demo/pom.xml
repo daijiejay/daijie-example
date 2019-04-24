@@ -12,12 +12,25 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.cloud.version>2.1.1.RELEASE</spring.cloud.version>
+        <google.code.gson.verison>2.8.5</google.code.gson.verison>
+        <google.guava.version>20.0</google.guava.version>
+        <netflix.servo.version>0.12.21</netflix.servo.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
             <version>${spring.cloud.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.code.gson</groupId>
+                    <artifactId>gson</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.google.guava</groupId>
+                    <artifactId>guava</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -26,7 +39,7 @@
         </dependency>
         <dependency>
             <groupId>org.daijie</groupId>
-            <artifactId>daijie-jdbc-spring-boot-starter</artifactId>
+            <artifactId>daijie-mybatis-spring-boot-starter</artifactId>
             <version>${daijie.version}</version>
         </dependency>
         <dependency>
@@ -34,10 +47,16 @@
             <artifactId>daijie-example-common-feign-demo</artifactId>
             <version>${daijie.version}</version>
         </dependency>
+        <!--2.1.1版本需要升级gson到2.6.0以上版本, guava到20.0以上版本-->
         <dependency>
-            <groupId>org.daijie</groupId>
-            <artifactId>daijie-example-common-model-demo</artifactId>
-            <version>${daijie.version}</version>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${google.code.gson.verison}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${google.guava.version}</version>
         </dependency>
     </dependencies>
 

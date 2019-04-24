@@ -18,7 +18,7 @@
     <dependencies>
         <dependency>
             <groupId>org.daijie</groupId>
-            <artifactId>daijie-jdbc-spring-boot-starter</artifactId>
+            <artifactId>daijie-mybatis-spring-boot-starter</artifactId>
             <version>${daijie.version}</version>
         </dependency>
     </dependencies>
