@@ -3,7 +3,9 @@ package org.daijie.example.gate.server;
 import org.daijie.shiro.security.annotation.EnableShiroSecurityServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
+@EnableEurekaClient
 @EnableShiroSecurityServer
 @SpringBootApplication
 public class GateServerStartUp {
