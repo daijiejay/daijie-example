@@ -8,7 +8,7 @@ server:
     port: 12812
 spring:
     application:
-        name: services-springbootadmin
+        name: govern-springbootadmin
     cloud:
         config:
             discovery:
@@ -16,4 +16,4 @@ spring:
                 serviceId: govern-config
             label: develop
             name: daijie
-            profile: services-springbootadmin
+            profile: govern-springbootadmin

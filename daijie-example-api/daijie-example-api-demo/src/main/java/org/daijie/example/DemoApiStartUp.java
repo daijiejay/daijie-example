@@ -1,4 +1,4 @@
-package org.daijie.example.api.demo;
+package org.daijie.example;
 
 import org.daijie.core.controller.EnableExceptionHandler;
 import org.daijie.core.lock.redis.EnableRedisLock;
@@ -9,6 +9,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.ComponentScan;
 
 //@EnableFastdfs
 //@EnableHdfs
@@ -19,12 +20,13 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableFeignClients
 @EnableEurekaClient
 @EnableExceptionHandler
+@ComponentScan(basePackages = "org.dijie.example")
 @RefreshScope
-public class ShiroApiStartUp {
+public class DemoApiStartUp {
 
 	public static void main(String[] args) {
 		try {
-			SpringApplication.run(ShiroApiStartUp.class, args);
+			SpringApplication.run(DemoApiStartUp.class, args);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

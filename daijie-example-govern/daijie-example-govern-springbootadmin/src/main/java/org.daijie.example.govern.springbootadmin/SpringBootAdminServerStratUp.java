@@ -10,9 +10,9 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @EnableAdminServer
 @EnableEurekaClient
 @EnableDiscoveryClient
-public class AdminServerStratUp {
+public class SpringBootAdminServerStratUp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AdminServerStratUp.class, args);
+		SpringApplication.run(SpringBootAdminServerStratUp.class, args);
 	}
 }

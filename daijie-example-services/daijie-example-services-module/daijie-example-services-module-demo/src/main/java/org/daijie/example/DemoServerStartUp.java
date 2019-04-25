@@ -1,4 +1,4 @@
-package org.daijie.example.services.module.demo;
+package org.daijie.example;
 
 import org.daijie.core.annotation.EnableParametersFilter;
 import org.daijie.core.controller.EnableExceptionHandler;
