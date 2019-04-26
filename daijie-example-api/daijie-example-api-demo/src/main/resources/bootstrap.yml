@@ -16,4 +16,4 @@ spring:
                 serviceId: govern-config
             label: develop
             name: daijie
-            profile: api-demo
+            profile: api-demoz
