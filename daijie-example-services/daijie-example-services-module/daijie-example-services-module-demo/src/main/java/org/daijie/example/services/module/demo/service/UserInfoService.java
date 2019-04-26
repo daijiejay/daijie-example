@@ -4,7 +4,7 @@ import org.daijie.core.result.ModelResult;
 import org.daijie.core.result.factory.ModelResultInitialFactory.Result;
 import org.daijie.example.common.model.demo.entity.UserInfo;
 import org.daijie.example.common.model.demo.mapper.UserInfoMapper;
-import org.dijie.example.feign.demo.UserInfoCloud;
+import org.daijie.example.feign.demo.UserInfoCloud;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 

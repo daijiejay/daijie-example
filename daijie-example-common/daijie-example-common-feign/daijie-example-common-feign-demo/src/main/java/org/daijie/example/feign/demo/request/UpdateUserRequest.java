@@ -1,4 +1,4 @@
-package org.dijie.example.feign.demo.request;
+package org.daijie.example.feign.demo.request;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

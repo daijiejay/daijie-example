@@ -1,15 +1,15 @@
-package org.dijie.example.feign.demo;
+package org.daijie.example.feign.demo;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.daijie.core.result.ModelResult;
 import org.daijie.core.result.PageResult;
-import org.dijie.example.feign.demo.request.AddUserRequest;
-import org.dijie.example.feign.demo.request.UpdateUserRequest;
-import org.dijie.example.feign.demo.request.UserRequest;
-import org.dijie.example.feign.demo.response.AddUserResponse;
-import org.dijie.example.feign.demo.response.UpdateUserResponse;
-import org.dijie.example.feign.demo.response.UserResponse;
+import org.daijie.example.feign.demo.request.AddUserRequest;
+import org.daijie.example.feign.demo.request.UpdateUserRequest;
+import org.daijie.example.feign.demo.request.UserRequest;
+import org.daijie.example.feign.demo.response.UpdateUserResponse;
+import org.daijie.example.feign.demo.response.AddUserResponse;
+import org.daijie.example.feign.demo.response.UserResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

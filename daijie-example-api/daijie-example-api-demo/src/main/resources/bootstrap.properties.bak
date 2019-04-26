@@ -7,6 +7,9 @@ server.port=80
 feign.services-module-demo=services-module-demo
 feign.services-special-rabbitmq=services-special-rabbitmq
 
+#springcloud2.1版本后需要加的属性
+spring.main.allow-bean-definition-overriding= true
+
 #eureka注册中心地址
 eureka.client.serviceUrl.defaultZone=http://127.0.0.1:8761/eureka/
 #是否设置注册优些IP地址
@@ -82,19 +85,19 @@ lock.redis.addresses=127.0.0.1:6379
 #lock.zk.maxRetries=3
 ##zookeeper分布式锁配置-----------------------------end
 
-swagger.groupNames=api
-#文档生成需要扫描的包路径，多个以“,”号隔开
-swagger.api.basePackage=org.daijie.api
-#标题
-swagger.api.title=
-#描述
-swagger.api.description=
-#路径
-swagger.api.termsOfServiceUrl=
-#联系方式
-swagger.api.contact=
-#版本
-swagger.api.version=1.0
+#swagger.groupNames=demo
+##文档生成需要扫描的包路径，多个以“,”号隔开
+#swagger.demo.basePackage=org.daijie.example
+##标题
+#swagger.demo.title=
+##描述
+#swagger.demo.description=
+##路径
+#swagger.demo.termsOfServiceUrl=
+##联系方式
+#swagger.demo.contact=
+##版本
+#swagger.demo.version=1.0
 
 #指定Log4j打印日志包路径的日志级别
 logging.level.org.daijie=DEBUG

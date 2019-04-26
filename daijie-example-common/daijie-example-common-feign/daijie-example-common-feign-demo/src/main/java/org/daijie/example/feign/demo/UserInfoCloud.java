@@ -1,4 +1,4 @@
-package org.dijie.example.feign.demo;
+package org.daijie.example.feign.demo;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
