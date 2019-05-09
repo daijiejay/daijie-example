@@ -16,4 +16,6 @@ spring:
                 serviceId: govern-config
             label: develop
             name: daijie
-            profile: api-demoz
+            profile: api-demo
+    main:
+        allow-bean-definition-overriding: true
